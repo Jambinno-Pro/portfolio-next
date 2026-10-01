@@ -6,12 +6,9 @@ export const metadata: Metadata = {
   description:
     "Software Developer focused on modern web applications, scalable backend systems, and reliable database solutions.",
   icons: {
-    icon: [
-      {
-        url: "/innofavi.png",
-        type: "image/png",
-      },
-    ],
+    icon: "/innofavi.png",
+    shortcut: "/innofavi.png",
+    apple: "/innofavi.png",
   },
 };
 
