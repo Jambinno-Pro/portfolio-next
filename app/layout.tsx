@@ -5,6 +5,14 @@ export const metadata: Metadata = {
   title: "Innocent Jambaya | Software Developer",
   description:
     "Software Developer focused on modern web applications, scalable backend systems, and reliable database solutions.",
+  icons: {
+    icon: [
+      {
+        url: "/innofavi.png",
+        type: "image/png",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
