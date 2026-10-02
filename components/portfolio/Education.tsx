@@ -12,8 +12,9 @@ const education = [
     achievement: "Graphic Designer",
   },
   {
-    school: "University of South Africa (UNISA)",
-    achievement: "Currently Pursuing Diploma in Information Technology",
+    school: "10ª classe",
+    achievement:
+      "Completed 10ª classe na Escola Secundaria Paulo Samuel Kankhomba, In Chimoio, Mozambique",
   },
 ];
 
