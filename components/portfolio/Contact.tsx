@@ -119,7 +119,7 @@ export default function Contact() {
             {/* Email */}
 
             <a
-              href="mailto:hello@iaminno.com"
+              href="mailto:info@iaminno.co.za"
               className="group flex items-center gap-3 rounded-xl border border-[var(--border)] bg-[var(--surface-soft)] p-3 transition-all duration-300 hover:border-cyan-300/20 hover:bg-cyan-300/[0.03]"
             >
               <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-cyan-300/20 bg-cyan-300/[0.05] text-cyan-300">
@@ -132,7 +132,7 @@ export default function Contact() {
                 </p>
 
                 <p className="mt-0.5 truncate text-sm text-[var(--muted)] group-hover:text-cyan-300">
-                  hello@iaminno.com
+                  info@iaminno.co.za
                 </p>
               </div>
 
@@ -189,7 +189,7 @@ export default function Contact() {
                 </a>
 
                 <a
-                  href="mailto:jambinnocreations@gmail.com"
+                  href="mailto:info@iaminno.co.za"
                   aria-label="Email"
                   className="flex h-9 w-9 items-center justify-center rounded-lg border border-[var(--border)] bg-[var(--surface-soft)] text-[var(--muted)] transition-all duration-300 hover:border-cyan-300/25 hover:bg-cyan-300/[0.05] hover:text-cyan-300"
                 >
