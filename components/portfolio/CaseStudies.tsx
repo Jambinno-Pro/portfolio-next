@@ -188,6 +188,55 @@ const caseStudies: CaseStudy[] = [
   },
 ];
 
+type ClientWebsite = {
+  name: string;
+  category: string;
+  url: string;
+};
+
+const clientWebsites: ClientWebsite[] = [
+  {
+    name: "Mother of Nations Academy",
+    category: "Education",
+    url: "https://motherofnationsacademy.co.za/",
+  },
+  {
+    name: "Tabby Boutique",
+    category: "Fashion & Retail",
+    url: "https://tabbyboutique.co.za/",
+  },
+  {
+    name: "Tabby Hair Academy",
+    category: "Hair Training & Education",
+    url: "https://tabbyhairacademy.co.za/",
+  },
+  {
+    name: "Realmac Energy",
+    category: "Energy",
+    url: "https://realmac-energy.co.za/",
+  },
+  {
+    name: "Lux Butlers",
+    category: "Luxury Services",
+    url: "https://luxbutlers.co.za/",
+  },
+  {
+    name: "Afrika EP",
+    category: "Business Website",
+    url: "https://afrikaep.com/",
+  },
+  {
+    name: "Modern Invest",
+    category: "Investment",
+    url: "https://moderninvest.co.za/",
+  },
+  {
+    name: "AES Zimbabwe",
+    category: "Business Website",
+    url: "https://aes.co.zw/",
+  },
+];
+
 function TechnologyIcon({ name }: { name: string }) {
   const normalized = name.toLowerCase().trim();
 
@@ -223,6 +272,7 @@ export default function CaseStudies() {
   const [selectedCaseStudy, setSelectedCaseStudy] = useState<CaseStudy | null>(
     null,
   );
+  const [showClientWebsites, setShowClientWebsites] = useState(false);
 
   useEffect(() => {
     document.body.style.overflow = selectedCaseStudy ? "hidden" : "";
@@ -364,6 +414,89 @@ export default function CaseStudies() {
                 </div>
               </article>
             ))}
+          </div>
+
+          {/* Client Website Builds */}
+          <div className="mt-7 border-t border-[var(--border-soft)] pt-6">
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <div className="max-w-2xl">
+                <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-cyan-300">
+                  Additional Client Work
+                </p>
+                <h3 className="mt-2 text-xl font-light tracking-tight text-[var(--foreground)] sm:text-2xl">
+                  Client Website Builds
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
+                  Websites built around client requirements, business goals and
+                  brand needs, including client-requested WordPress websites.
+                </p>
+              </div>
+
+              <button
+                type="button"
+                onClick={() => setShowClientWebsites((visible) => !visible)}
+                aria-expanded={showClientWebsites}
+                aria-controls="client-websites-list"
+                className="inline-flex shrink-0 items-center justify-center gap-2 self-start rounded-full border border-cyan-300/25 bg-cyan-300/[0.06] px-4 py-2.5 text-xs font-medium text-cyan-300 transition-all duration-300 hover:border-cyan-300/40 hover:bg-cyan-300/10 hover:shadow-[0_0_25px_rgba(103,232,249,0.08)] sm:self-center"
+              >
+                {showClientWebsites
+                  ? "Hide Client Websites"
+                  : "View Client Websites"}
+                <ArrowUpRight
+                  size={14}
+                  className={`transition-transform duration-300 ${
+                    showClientWebsites ? "rotate-45" : ""
+                  }`}
+                />
+              </button>
+            </div>
+
+            {showClientWebsites && (
+              <div
+                id="client-websites-list"
+                className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3"
+              >
+                {clientWebsites.map((website, index) => (
+                  <article
+                    key={website.url}
+                    className="group relative flex min-w-0 flex-col overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--surface-soft)] p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-300/25 hover:shadow-[0_12px_35px_rgba(34,211,238,0.05)]"
+                  >
+                    <div className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-cyan-300/[0.035] blur-2xl transition-all duration-300 group-hover:bg-cyan-300/[0.08]" />
+
+                    <div className="relative flex items-start justify-between gap-3">
+                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-cyan-300/20 bg-cyan-300/[0.05] text-cyan-300">
+                        <SiWordpress size={17} />
+                      </div>
+                      <span className="text-[10px] tracking-widest text-[var(--muted-soft)]">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                    </div>
+
+                    <h4 className="relative mt-4 text-base font-normal leading-snug text-[var(--foreground)] transition-colors group-hover:text-cyan-100">
+                      {website.name}
+                    </h4>
+                    <p className="relative mt-1 text-xs text-[var(--muted-soft)]">
+                      {website.category}
+                    </p>
+                    <p className="relative mt-3 break-all text-xs leading-5 text-[var(--muted)]">
+                      {website.url
+                        .replace(/^https?:\/\//, "")
+                        .replace(/\/$/, "")}
+                    </p>
+
+                    <a
+                      href={website.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="relative mt-4 inline-flex items-center gap-2 self-start rounded-full border border-cyan-300/20 px-3 py-2 text-xs text-cyan-300 transition-all duration-300 hover:border-cyan-300/40 hover:bg-cyan-300/[0.06]"
+                    >
+                      Visit Website
+                      <ExternalLink size={13} />
+                    </a>
+                  </article>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </section>
