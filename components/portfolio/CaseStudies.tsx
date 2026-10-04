@@ -440,7 +440,7 @@ export default function CaseStudies() {
                 {/* Technologies */}
 
                 <div className="relative mt-4 flex flex-wrap gap-1.5">
-                  {project.technologies.slice(0, 5).map((technology) => (
+                  {project.technologies.slice(0, 8).map((technology) => (
                     <span
                       key={technology}
                       className="inline-flex items-center gap-1.5 rounded-full border border-[var(--border)] bg-[var(--surface-soft)] px-2.5 py-1.5 text-[11px] text-[var(--muted)] transition-all duration-300 hover:border-cyan-300/20 hover:text-cyan-300"
