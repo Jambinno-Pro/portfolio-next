@@ -158,22 +158,15 @@ const caseStudies: CaseStudy[] = [
     ],
 
     technologies: [
-      // Frontend
       "Next.js",
       "React",
       "TypeScript",
       "Tailwind CSS",
-
-      // Backend
       "C#",
       ".NET 10",
       "ASP.NET Core",
       "Entity Framework Core",
-
-      // Database
       "SQL Server",
-
-      // API & Tools
       "REST API",
       "Git",
       "GitHub",
