@@ -124,6 +124,71 @@ const caseStudies: CaseStudy[] = [
   {
     id: 3,
     number: "03",
+    title: "StockFlow — Inventory Management System",
+    category: "Full-Stack / Backend Development",
+    description:
+      "A full-stack inventory management system designed to help businesses manage products, stock levels, suppliers, warehouses and inventory transactions through a modern web interface and structured backend API.",
+
+    challenge:
+      "Inventory operations can become difficult to manage when products, suppliers, warehouses and stock movements are handled separately. The project required a reliable system that could maintain accurate inventory data, track stock movements, monitor low-stock products and provide useful operational insights through a centralized dashboard.",
+
+    solution:
+      "I designed StockFlow as a full-stack application using Next.js, React, TypeScript and Tailwind CSS on the frontend, with an ASP.NET Core Web API powered by C#, Entity Framework Core and SQL Server on the backend. The system uses relational data modelling, DTOs, validation, database migrations and business rules to manage inventory safely. Stock movements are handled through STOCK_IN, STOCK_OUT and ADJUSTMENT transactions, while the dashboard provides inventory statistics, stock valuation, low-stock monitoring and recent transaction activity.",
+
+    features: [
+      "Product CRUD management",
+      "SKU uniqueness validation",
+      "Category management",
+      "Supplier management",
+      "Warehouse management",
+      "Stock-in transactions",
+      "Stock-out transactions",
+      "Stock adjustments",
+      "Low-stock monitoring",
+      "Inventory stock valuation",
+      "Product search",
+      "Category, supplier and warehouse filtering",
+      "Pagination",
+      "Dynamic sorting",
+      "Dashboard inventory analytics",
+      "Recent transaction tracking",
+      "Relational database constraints",
+      "Database migrations",
+      "API validation and error handling",
+    ],
+
+    technologies: [
+      // Frontend
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+
+      // Backend
+      "C#",
+      ".NET 10",
+      "ASP.NET Core",
+      "Entity Framework Core",
+
+      // Database
+      "SQL Server",
+
+      // API & Tools
+      "REST API",
+      "Git",
+      "GitHub",
+      "Postman",
+    ],
+    outcome:
+      "StockFlow evolved into a structured inventory management backend capable of handling products, suppliers, warehouses and controlled stock movements while providing real-time inventory statistics through a dashboard API. The project strengthened my experience in backend architecture, relational database design, business logic, API development and SQL Server integration.",
+
+    liveUrl: undefined,
+    githubUrl: "https://github.com/Jambinno-Pro/DotNet-Project",
+  },
+
+  {
+    id: 3,
+    number: "03",
     title: "Green Shuttle — Full-Stack Shuttle Management Platform",
     category: "Web Development",
     description:
