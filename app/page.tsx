@@ -7,6 +7,9 @@ import { ArrowRight, Code2, Database, Mail, Terminal } from "lucide-react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 const technologies = [
+  "C#",
+  ".NET",
+  "ASP.NET Core",
   "TypeScript",
   "JavaScript",
   "React",
@@ -14,10 +17,11 @@ const technologies = [
   "Node.js",
   "Express.js",
   "NestJS",
-  "MongoDB",
+  "SQL Server",
   "PostgreSQL",
   "MySQL",
-  "REST API",
+  "MongoDB",
+  "REST APIs",
   "Git",
   "GitHub",
   "Docker",
@@ -45,6 +49,10 @@ export default function Home() {
 
     return () => clearInterval(interval);
   }, []);
+
+  const formattedGreeting = greeting
+    .toLowerCase()
+    .replace(/\b\w/g, (char) => char.toUpperCase());
 
   return (
     <main className="landing-page">
@@ -95,13 +103,6 @@ export default function Home() {
         </div>
 
         <div className="header-actions">
-          <a
-            href="mailto:jambinocreations@gmail.com"
-            className="header-connect"
-          >
-            Connect
-          </a>
-
           <a href="/portfolio" className="header-portfolio">
             View Portfolio
             <ArrowRight size={14} />
@@ -117,9 +118,11 @@ export default function Home() {
         <div className="hero-content">
           {/* =================================================
               LEFT HERO
-          ================================================= */}
+          ================================================== */}
 
           <div className="hero-left">
+            {/* EYEBROW */}
+
             <div className="hero-eyebrow">
               <span className="eyebrow-line" />
 
@@ -127,25 +130,25 @@ export default function Home() {
 
               <span className="eyebrow-dot">•</span>
 
-              <span>Full Stack & Backend Developer</span>
+              <span>Full-Stack & Backend</span>
             </div>
 
+            {/* HERO TITLE */}
+
             <h1>
-              <span className="greeting">
-                {greeting
-                  .toLowerCase()
-                  .replace(/\b\w/g, (char) => char.toUpperCase())}
-              </span>
+              <span className="greeting">{formattedGreeting}</span>
 
               <span className="hero-name">I'm Innocent.</span>
             </h1>
 
+            {/* HERO DESCRIPTION */}
+
             <p className="hero-description">
-              I’m a Software Developer focused on building accessible,
-              high-performance web experiences with C#, .Net, React, Javascript,
-              ASP.NET, TypeScript, Next.js, Node.js. I also build scalable
-              backend systems and reliable database solutions, turning ideas
-              into modern, production-ready digital products.
+              I’m a Software Developer focused on building modern web
+              applications, scalable backend systems, RESTful APIs, and reliable
+              database solutions. I work across the stack with C#, .NET, ASP.NET
+              Core, TypeScript, Next.js, React, Node.js, and SQL databases,
+              turning ideas into practical, production-ready software.
             </p>
 
             {/* =================================================
@@ -157,15 +160,6 @@ export default function Home() {
                 <span>View Portfolio</span>
 
                 <ArrowRight size={15} />
-              </a>
-
-              <a
-                href="mailto:jambinnocreations@gmail.com"
-                className="secondary-button"
-              >
-                <Mail size={15} />
-
-                <span>Let's Connect</span>
               </a>
             </div>
 
@@ -192,7 +186,7 @@ export default function Home() {
                 <FaLinkedinIn />
               </a>
 
-              <a href="mailto:jambinocreations@gmail.com" aria-label="Email">
+              <a href="mailto:jambinnocreations@gmail.com" aria-label="Email">
                 <Mail size={17} />
               </a>
             </div>
@@ -223,6 +217,8 @@ export default function Home() {
               {/* CARD BODY */}
 
               <div className="developer-body">
+                {/* TITLE */}
+
                 <div className="developer-title">
                   <div className="developer-icon">
                     <Terminal size={18} />
@@ -231,13 +227,15 @@ export default function Home() {
                   <div>
                     <h2>Software Developer</h2>
 
-                    <p>Web • Backend • Database</p>
+                    <p>Full-Stack • Backend • Database</p>
                   </div>
                 </div>
 
                 {/* CODE */}
 
                 <div className="code-block">
+                  {/* LINE 01 */}
+
                   <div className="code-line">
                     <span className="code-number">01</span>
 
@@ -246,6 +244,8 @@ export default function Home() {
                       <span className="code-variable">developer</span> = {"{"}
                     </span>
                   </div>
+
+                  {/* LINE 02 */}
 
                   <div className="code-line">
                     <span className="code-number">02</span>
@@ -257,6 +257,8 @@ export default function Home() {
                     </span>
                   </div>
 
+                  {/* LINE 03 */}
+
                   <div className="code-line">
                     <span className="code-number">03</span>
 
@@ -266,6 +268,8 @@ export default function Home() {
                       <span className="code-string">"Software Developer"</span>,
                     </span>
                   </div>
+
+                  {/* LINE 04 */}
 
                   <div className="code-line">
                     <span className="code-number">04</span>
@@ -277,15 +281,20 @@ export default function Home() {
                     </span>
                   </div>
 
+                  {/* LINE 05 */}
+
                   <div className="code-line">
                     <span className="code-number">05</span>
 
                     <span>
                       &nbsp;&nbsp;
                       <span className="code-property">backend</span>:{" "}
-                      <span className="code-string">"Node.js / Express"</span>,
+                      <span className="code-string">"C# / .NET / Node.js"</span>
+                      ,
                     </span>
                   </div>
+
+                  {/* LINE 06 */}
 
                   <div className="code-line">
                     <span className="code-number">06</span>
@@ -293,9 +302,14 @@ export default function Home() {
                     <span>
                       &nbsp;&nbsp;
                       <span className="code-property">database</span>:{" "}
-                      <span className="code-string">"MongoDB / SQL"</span>,
+                      <span className="code-string">
+                        "SQL Server / PostgreSQL / MongoDB"
+                      </span>
+                      ,
                     </span>
                   </div>
+
+                  {/* LINE 07 */}
 
                   <div className="code-line">
                     <span className="code-number">07</span>
@@ -303,9 +317,11 @@ export default function Home() {
                     <span>
                       &nbsp;&nbsp;
                       <span className="code-property">language</span>:{" "}
-                      <span className="code-string">"TypeScript"</span>
+                      <span className="code-string">"TypeScript / C#"</span>
                     </span>
                   </div>
+
+                  {/* LINE 08 */}
 
                   <div className="code-line">
                     <span className="code-number">08</span>
@@ -319,11 +335,13 @@ export default function Home() {
                 <div className="developer-footer">
                   <div>
                     <Code2 size={14} />
+
                     <span>Development</span>
                   </div>
 
                   <div>
                     <Database size={14} />
+
                     <span>Database</span>
                   </div>
                 </div>
@@ -336,14 +354,11 @@ export default function Home() {
             TECHNOLOGY MARQUEE
         ==================================================
 
-            Starts from the developer side.
-
             Moves RIGHT → LEFT.
 
-            Uses the entire hero width.
+            Uses the full hero width.
 
-            Disappears at the far-left side underneath
-            the GitHub/social area.
+            Duplicated array creates a continuous marquee.
 
         ================================================== */}
 
@@ -364,11 +379,15 @@ export default function Home() {
 
       <footer className="landing-footer">
         <div className="footer-inner">
+          {/* IDENTITY */}
+
           <div className="footer-identity">
             <strong>Innocent Jambaya</strong>
 
             <span>Software Developer</span>
           </div>
+
+          {/* SOCIAL LINKS */}
 
           <div className="footer-socials">
             <a
@@ -389,10 +408,16 @@ export default function Home() {
               <FaLinkedinIn />
             </a>
 
-            <a href="mailto:jambinocreations@gmail.com" aria-label="Email">
+            <a
+              href="mailto:jambinnocreations@gmail.com?subject=Contact%20from%20Portfolio"
+              aria-label="Email"
+              className="inline-flex items-center justify-center"
+            >
               <Mail size={16} />
             </a>
           </div>
+
+          {/* COPYRIGHT */}
 
           <span className="footer-copy">
             © {new Date().getFullYear()} Innocent Jambaya

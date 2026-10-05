@@ -4,17 +4,20 @@ import { GraduationCap, Award, BookOpen, CheckCircle2 } from "lucide-react";
 
 const education = [
   {
+    school: "University of South Africa (UNISA)",
+    achievement: "Diploma in Information Technology — In Progress",
+  },
+  {
     school: "Chibuwe High School",
     achievement: "O'Level",
   },
   {
     school: "Get Smarter UCT",
-    achievement: "Graphic Designer",
+    achievement: "Graphic Design",
   },
   {
-    school: "10ª classe",
-    achievement:
-      "Completed 10ª classe na Escola Secundaria Paulo Samuel Kankhomba, In Chimoio, Mozambique",
+    school: "Escola Secundaria Paulo Samuel Kankhomba",
+    achievement: "Completed 10ª classe in Chimoio, Mozambique",
   },
 ];
 
@@ -53,13 +56,14 @@ export default function Education() {
             Education
           </p>
 
-          <h2 className="text-3xl font-light leading-tight tracking-tight text-white md:text-4xl">
+          <h2 className="text-xl font-light leading-tight tracking-tight text-white md:text-2xl">
             Education &{" "}
             <span className="font-normal text-cyan-300">Certifications.</span>
           </h2>
 
           <p className="mt-2 text-sm leading-5 text-slate-400 md:text-[15px]">
-            Academic foundations and professional learning.
+            Academic foundations, professional training and continuous
+            development in software engineering and technology.
           </p>
         </div>
 
@@ -164,6 +168,7 @@ export default function Education() {
                         className="flex items-start gap-2.5 text-sm leading-5 text-slate-400"
                       >
                         <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-cyan-300/70" />
+
                         <span>{certificate}</span>
                       </div>
                     ))}
@@ -177,8 +182,9 @@ export default function Education() {
         {/* Learning statement */}
         <div className="mt-4 rounded-2xl border border-white/[0.08] bg-white/[0.02] px-4 py-3">
           <p className="text-center text-sm leading-5 text-slate-400">
-            Continuously learning, building and expanding my knowledge in
-            software development and cloud technologies.
+            Continuously learning, building and strengthening my skills in
+            software engineering, backend development, databases, cloud
+            computing and modern application architecture.
           </p>
         </div>
       </div>

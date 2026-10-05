@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+
 import {
   ArrowUpRight,
   ExternalLink,
@@ -20,7 +21,6 @@ import {
   SiMongodb,
   SiMysql,
   SiPhp,
-  SiWordpress,
   SiJavascript,
   SiHtml5,
   SiCss,
@@ -50,7 +50,7 @@ const caseStudies: CaseStudy[] = [
   {
     id: 1,
     number: "01",
-    title: "EventBook - Event Management System",
+    title: "EventBook — Event Management System",
     category: "Web Development",
     description:
       "A full-stack event booking and registration platform designed to simplify event publishing, attendee registration, booking management and event administration.",
@@ -105,7 +105,7 @@ const caseStudies: CaseStudy[] = [
       "Project case studies",
       "Contact functionality",
       "Dark and light theme support",
-      "GitHub Repository API feed",
+      "GitHub repository API feed",
     ],
     technologies: [
       "Next.js",
@@ -128,13 +128,10 @@ const caseStudies: CaseStudy[] = [
     category: "Full-Stack / Backend Development",
     description:
       "A full-stack inventory management system designed to help businesses manage products, stock levels, suppliers, warehouses and inventory transactions through a modern web interface and structured backend API.",
-
     challenge:
       "Inventory operations can become difficult to manage when products, suppliers, warehouses and stock movements are handled separately. The project required a reliable system that could maintain accurate inventory data, track stock movements, monitor low-stock products and provide useful operational insights through a centralized dashboard.",
-
     solution:
       "I designed StockFlow as a full-stack application using Next.js, React, TypeScript and Tailwind CSS on the frontend, with an ASP.NET Core Web API powered by C#, Entity Framework Core and SQL Server on the backend. The system uses relational data modelling, DTOs, validation, database migrations and business rules to manage inventory safely. Stock movements are handled through STOCK_IN, STOCK_OUT and ADJUSTMENT transactions, while the dashboard provides inventory statistics, stock valuation, low-stock monitoring and recent transaction activity.",
-
     features: [
       "Product CRUD management",
       "SKU uniqueness validation",
@@ -156,7 +153,6 @@ const caseStudies: CaseStudy[] = [
       "Database migrations",
       "API validation and error handling",
     ],
-
     technologies: [
       "Next.js",
       "React",
@@ -173,23 +169,21 @@ const caseStudies: CaseStudy[] = [
       "Postman",
     ],
     outcome:
-      "StockFlow evolved into a structured inventory management backend capable of handling products, suppliers, warehouses and controlled stock movements while providing real-time inventory statistics through a dashboard API. The project strengthened my experience in backend architecture, relational database design, business logic, API development and SQL Server integration.",
-
-    liveUrl: undefined,
+      "StockFlow evolved into a structured inventory management backend capable of handling products, suppliers, warehouses and controlled stock movements while providing inventory statistics through a dashboard API. The project strengthened my experience in backend architecture, relational database design, business logic, API development and SQL Server integration.",
     githubUrl: "https://github.com/Jambinno-Pro/DotNet-Project",
   },
 
   {
-    id: 3,
-    number: "03",
+    id: 4,
+    number: "04",
     title: "Green Shuttle — Full-Stack Shuttle Management Platform",
     category: "Web Development",
     description:
-      "Green Shuttle is a full-stack transportation management platform designed to simplify shuttle services by connecting passengers with reliable transport information while giving administrators a centralized system to manage the platform. The project was developed as a modern web application with a responsive user interface, secure authentication, database integration, email communication, and an administrative dashboard.",
+      "Green Shuttle is a full-stack transportation management platform designed to simplify shuttle services by connecting passengers with reliable transport information while giving administrators a centralized system to manage the platform. The project was developed as a modern web application with a responsive user interface, secure authentication, database integration, email communication and an administrative dashboard.",
     challenge:
-      "My client was managing their shuttle-service operations through traditional and largely manual processes. Communication with users was fragmented, administrative tasks were time-consuming, and it was difficult to keep passengers consistently informed about available services and updates. The client needed a centralized digital platform that would bring the entire shuttle operation together allowing users to access services and information easily, while giving administrators a streamlined system to manage users, services, communication, and day-to-day operations from one place. ",
+      "My client was managing shuttle-service operations through traditional and largely manual processes. Communication with users was fragmented, administrative tasks were time-consuming and it was difficult to keep passengers consistently informed about available services and updates. The client needed a centralized digital platform that would bring the shuttle operation together, allowing users to access services and information easily while giving administrators a streamlined system to manage users, services, communication and day-to-day operations from one place.",
     solution:
-      "I developed Greens Shuttle as a full-stack web application with separate user-facing and administrative functionality. A major part of the project was the Admin Dashboard, which provides administrators with centralized control over the platform. The dashboard allows administrators to manage and monitor important system information rather than relying on manual database changes. ",
+      "I developed Green Shuttle as a full-stack web application with separate user-facing and administrative functionality. A major part of the project was the Admin Dashboard, which provides administrators with centralized control over the platform. The dashboard allows administrators to manage and monitor important system information rather than relying on manual database changes.",
     features: [
       "Shuttle service presentation",
       "Route information",
@@ -202,7 +196,7 @@ const caseStudies: CaseStudy[] = [
       "Database-driven management",
       "Centralized platform monitoring",
       "Administrative controls",
-      "Secure Admin Login",
+      "Secure admin login",
     ],
     technologies: [
       "React",
@@ -211,114 +205,86 @@ const caseStudies: CaseStudy[] = [
       "Supabase",
       "PostgreSQL",
       "Supabase Auth",
-      "APIs",
-      "Email System, 'CSS",
+      "REST APIs",
+      "Email System",
+      "CSS",
       "Git",
       "GitHub",
     ],
     outcome:
-      "The project provided Greens Shuttle with a professional digital platform for presenting its transportation services and essential information. Green Shuttle demonstrates my ability to build a complete web application from frontend interface through to backend infrastructure.",
+      "The project provided Green Shuttle with a professional digital platform for presenting its transportation services and essential information. Green Shuttle demonstrates my ability to build a complete web application from frontend interface through to backend infrastructure.",
     liveUrl: "https://www.greensshuttle.co.za/",
     githubUrl: "https://github.com/Jambinno-Pro/portfolio",
-  },
-
-  {
-    id: 4,
-    number: "04",
-    title: "Database Development",
-    category: "Database Development",
-    description:
-      "A database-focused development project exploring how application data can be structured, stored, accessed and managed efficiently.",
-    challenge:
-      "The project focused on understanding the relationship between application logic and persistent data while creating a reliable structure for managing information.",
-    solution:
-      "I worked with database structures, data modelling, CRUD operations and backend integration to understand how modern applications communicate with databases.",
-    features: [
-      "Data modelling",
-      "CRUD operations",
-      "Database relationships",
-      "Backend integration",
-      "Structured data management",
-    ],
-    technologies: ["Node.js", "Express.js", "MongoDB", "REST API"],
-    outcome:
-      "The project strengthened my understanding of database architecture and the connection between backend applications and persistent data.",
-  },
-];
-
-type ClientWebsite = {
-  name: string;
-  category: string;
-  url: string;
-};
-
-const clientWebsites: ClientWebsite[] = [
-  {
-    name: "Mother of Nations Academy",
-    category: "Education",
-    url: "https://motherofnationsacademy.co.za/",
-  },
-  {
-    name: "Tabby Boutique",
-    category: "Fashion & Retail",
-    url: "https://tabbyboutique.co.za/",
-  },
-  {
-    name: "Tabby Hair Academy",
-    category: "Hair Training & Education",
-    url: "https://tabbyhairacademy.co.za/",
-  },
-  {
-    name: "Realmac Energy",
-    category: "Energy",
-    url: "https://realmac-energy.co.za/",
-  },
-  {
-    name: "Lux Butlers",
-    category: "Luxury Services",
-    url: "https://luxbutlers.co.za/",
-  },
-  {
-    name: "Afrika EP",
-    category: "Business Website",
-    url: "https://afrikaep.com/",
-  },
-  {
-    name: "Modern Invest",
-    category: "Investment",
-    url: "https://moderninvest.co.za/",
-  },
-  {
-    name: "AES Zimbabwe",
-    category: "Business Website",
-    url: "https://aes.co.zw/",
   },
 ];
 
 function TechnologyIcon({ name }: { name: string }) {
   const normalized = name.toLowerCase().trim();
 
-  if (normalized === "next.js") return <SiNextdotjs size={17} />;
-  if (normalized === "typescript") return <SiTypescript size={17} />;
-  if (normalized === "react") return <SiReact size={17} />;
-  if (normalized === "tailwind css") return <SiTailwindcss size={17} />;
-  if (normalized === "node.js") return <SiNodedotjs size={17} />;
-  if (normalized === "express.js") return <SiExpress size={17} />;
-  if (normalized === "mongodb") return <SiMongodb size={17} />;
-  if (normalized === "mysql") return <SiMysql size={17} />;
-  if (normalized === "php") return <SiPhp size={17} />;
-  if (normalized === "wordpress") return <SiWordpress size={17} />;
-  if (normalized === "javascript") return <SiJavascript size={17} />;
+  if (normalized === "next.js") {
+    return <SiNextdotjs size={17} />;
+  }
+
+  if (normalized === "typescript") {
+    return <SiTypescript size={17} />;
+  }
+
+  if (normalized === "react") {
+    return <SiReact size={17} />;
+  }
+
+  if (normalized === "tailwind css") {
+    return <SiTailwindcss size={17} />;
+  }
+
+  if (normalized === "node.js") {
+    return <SiNodedotjs size={17} />;
+  }
+
+  if (normalized === "express.js") {
+    return <SiExpress size={17} />;
+  }
+
+  if (normalized === "mongodb") {
+    return <SiMongodb size={17} />;
+  }
+
+  if (normalized === "mysql") {
+    return <SiMysql size={17} />;
+  }
+
+  if (normalized === "php") {
+    return <SiPhp size={17} />;
+  }
+
+  if (normalized === "javascript") {
+    return <SiJavascript size={17} />;
+  }
+
   if (normalized === "html5" || normalized === "html") {
     return <SiHtml5 size={17} />;
   }
+
   if (normalized === "css3" || normalized === "css") {
     return <SiCss size={17} />;
   }
-  if (normalized === "git") return <SiGit size={17} />;
-  if (normalized === "github") return <SiGithub size={17} />;
-  if (normalized === "vite") return <SiVite size={17} />;
-  if (normalized === "supabase") return <SiSupabase size={17} />;
+
+  if (normalized === "git") {
+    return <SiGit size={17} />;
+  }
+
+  if (normalized === "github") {
+    return <SiGithub size={17} />;
+  }
+
+  if (normalized === "vite") {
+    return <SiVite size={17} />;
+  }
+
+  if (normalized === "supabase") {
+    return <SiSupabase size={17} />;
+  }
+
   if (normalized === "postgresql" || normalized === "postgres") {
     return <SiPostgresql size={17} />;
   }
@@ -330,7 +296,6 @@ export default function CaseStudies() {
   const [selectedCaseStudy, setSelectedCaseStudy] = useState<CaseStudy | null>(
     null,
   );
-  const [showClientWebsites, setShowClientWebsites] = useState(false);
 
   useEffect(() => {
     document.body.style.overflow = selectedCaseStudy ? "hidden" : "";
@@ -365,6 +330,7 @@ export default function CaseStudies() {
         className="relative scroll-mt-24 overflow-hidden border-b border-[var(--border-soft)] bg-[var(--background)] py-6 sm:py-8"
       >
         {/* Background Effects */}
+
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute left-[5%] top-[10%] h-56 w-56 rounded-full bg-cyan-400/[0.035] blur-3xl" />
 
@@ -385,7 +351,7 @@ export default function CaseStudies() {
               </span>
             </div>
 
-            <h2 className="text-3xl font-light leading-tight tracking-tight text-[var(--foreground)] md:text-4xl">
+            <h2 className="text-xl font-light leading-tight tracking-tight text-[var(--foreground)] md:text-2xl">
               Selected <span className="text-cyan-300">Case Studies.</span>
             </h2>
 
@@ -473,89 +439,6 @@ export default function CaseStudies() {
               </article>
             ))}
           </div>
-
-          {/* Client Website Builds */}
-          <div className="mt-7 border-t border-[var(--border-soft)] pt-6">
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <div className="max-w-2xl">
-                <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-cyan-300">
-                  Additional Client Work
-                </p>
-                <h3 className="mt-2 text-xl font-light tracking-tight text-[var(--foreground)] sm:text-2xl">
-                  Client Website Builds
-                </h3>
-                <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
-                  Websites built around client requirements, business goals and
-                  brand needs, including client-requested WordPress websites.
-                </p>
-              </div>
-
-              <button
-                type="button"
-                onClick={() => setShowClientWebsites((visible) => !visible)}
-                aria-expanded={showClientWebsites}
-                aria-controls="client-websites-list"
-                className="inline-flex shrink-0 items-center justify-center gap-2 self-start rounded-full border border-cyan-300/25 bg-cyan-300/[0.06] px-4 py-2.5 text-xs font-medium text-cyan-300 transition-all duration-300 hover:border-cyan-300/40 hover:bg-cyan-300/10 hover:shadow-[0_0_25px_rgba(103,232,249,0.08)] sm:self-center"
-              >
-                {showClientWebsites
-                  ? "Hide Client Websites"
-                  : "View Client Websites"}
-                <ArrowUpRight
-                  size={14}
-                  className={`transition-transform duration-300 ${
-                    showClientWebsites ? "rotate-45" : ""
-                  }`}
-                />
-              </button>
-            </div>
-
-            {showClientWebsites && (
-              <div
-                id="client-websites-list"
-                className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3"
-              >
-                {clientWebsites.map((website, index) => (
-                  <article
-                    key={website.url}
-                    className="group relative flex min-w-0 flex-col overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--surface-soft)] p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-300/25 hover:shadow-[0_12px_35px_rgba(34,211,238,0.05)]"
-                  >
-                    <div className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-cyan-300/[0.035] blur-2xl transition-all duration-300 group-hover:bg-cyan-300/[0.08]" />
-
-                    <div className="relative flex items-start justify-between gap-3">
-                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-cyan-300/20 bg-cyan-300/[0.05] text-cyan-300">
-                        <SiWordpress size={17} />
-                      </div>
-                      <span className="text-[10px] tracking-widest text-[var(--muted-soft)]">
-                        {String(index + 1).padStart(2, "0")}
-                      </span>
-                    </div>
-
-                    <h4 className="relative mt-4 text-base font-normal leading-snug text-[var(--foreground)] transition-colors group-hover:text-cyan-100">
-                      {website.name}
-                    </h4>
-                    <p className="relative mt-1 text-xs text-[var(--muted-soft)]">
-                      {website.category}
-                    </p>
-                    <p className="relative mt-3 break-all text-xs leading-5 text-[var(--muted)]">
-                      {website.url
-                        .replace(/^https?:\/\//, "")
-                        .replace(/\/$/, "")}
-                    </p>
-
-                    <a
-                      href={website.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="relative mt-4 inline-flex items-center gap-2 self-start rounded-full border border-cyan-300/20 px-3 py-2 text-xs text-cyan-300 transition-all duration-300 hover:border-cyan-300/40 hover:bg-cyan-300/[0.06]"
-                    >
-                      Visit Website
-                      <ExternalLink size={13} />
-                    </a>
-                  </article>
-                ))}
-              </div>
-            )}
-          </div>
         </div>
       </section>
 
@@ -598,7 +481,7 @@ export default function CaseStudies() {
           {/* Modal Header */}
 
           <header className="relative z-20 border-b border-white/[0.08] bg-[#020812]/80 backdrop-blur-2xl">
-            <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-3 sm:px-8 lg:px-10 md:py-4">
+            <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-3 sm:px-8 md:py-4 lg:px-10">
               <div className="flex items-center gap-3">
                 <div className="flex h-8 w-8 items-center justify-center rounded-lg border border-cyan-300/20 bg-cyan-300/[0.06] text-[11px] font-medium text-cyan-300">
                   {selectedCaseStudy.number}
@@ -632,7 +515,7 @@ export default function CaseStudies() {
           {/* Modal Scroll Area */}
 
           <div className="relative z-10 h-[calc(100vh-65px)] overflow-y-auto">
-            <div className="mx-auto w-full max-w-7xl px-6 py-7 sm:px-8 lg:px-10 md:py-10">
+            <div className="mx-auto w-full max-w-7xl px-6 py-7 sm:px-8 md:py-10 lg:px-10">
               {/* Modal Hero */}
 
               <div className="relative overflow-hidden rounded-3xl border border-cyan-300/[0.12] bg-white/[0.025] p-5 shadow-[0_30px_100px_rgba(0,0,0,0.35)] md:p-7 lg:p-8">

@@ -83,9 +83,9 @@ export default function Contact() {
             </span>
           </div>
 
-          <h2 className="text-3xl font-light leading-tight tracking-tight text-[var(--foreground)] md:text-4xl">
-            Let&apos;s Build Something{" "}
-            <span className="text-cyan-300">Useful.</span>
+          <h2 className="text-xl font-light leading-tight tracking-tight text-[var(--foreground)] md:text-2xl">
+            Let&apos;s Build{" "}
+            <span className="text-cyan-300">Practical Solutions.</span>
           </h2>
 
           <p className="mt-2 max-w-2xl text-[15px] leading-5 text-[var(--muted)]">
@@ -105,14 +105,14 @@ export default function Contact() {
                 Get In Touch
               </p>
 
-              <h3 className="mt-2 text-xl font-light leading-tight text-[var(--foreground)]">
+              <h3 className="mt-2 text-lg font-light leading-tight text-[var(--foreground)] md:text-xl">
                 Let&apos;s connect.
               </h3>
-
               <p className="mt-2 text-sm leading-5 text-[var(--muted)]">
-                I&apos;m open to discussing software development projects,
-                freelance opportunities, collaborations and interesting
-                technical challenges.
+                If you&apos;re building a web application, backend system, or
+                digital solution, send me the brief. I&apos;ll help turn the
+                requirements into a practical technical approach, with clear
+                scope, priorities, and next steps.
               </p>
             </div>
 

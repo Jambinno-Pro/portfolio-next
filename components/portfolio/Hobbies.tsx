@@ -1,11 +1,25 @@
 "use client";
 
-import { Camera, Code2, Globe2, Lightbulb, Music, Plane } from "lucide-react";
+import {
+  Camera,
+  Code2,
+  Globe2,
+  Lightbulb,
+  Music,
+  Plane,
+  ArrowUpRight,
+} from "lucide-react";
 
 type Hobby = {
   title: string;
   description: string;
   icon: React.ElementType;
+};
+
+type ClientWebsite = {
+  name: string;
+  description: string;
+  url: string;
 };
 
 const hobbies: Hobby[] = [
@@ -47,6 +61,45 @@ const hobbies: Hobby[] = [
   },
 ];
 
+const clientWebsites: ClientWebsite[] = [
+  {
+    name: "Mother of Nations Academy",
+    description:
+      "A professional school website designed to present the institution, its programs and educational information.",
+    url: "https://motherofnationsacademy.co.za/",
+  },
+  {
+    name: "Tabby Boutique",
+    description:
+      "A fashion and lifestyle website created to present the brand, products and services online.",
+    url: "https://tabbyboutique.co.za/",
+  },
+  {
+    name: "Tabby Hair Academy",
+    description:
+      "A training and academy website focused on presenting hair education, courses and academy information.",
+    url: "https://tabbyhairacademy.co.za/",
+  },
+  {
+    name: "Realmac Energy",
+    description:
+      "A corporate website created to present the company's energy solutions and business services.",
+    url: "https://realmac-energy.co.za/",
+  },
+  {
+    name: "Lux Butlers",
+    description:
+      "A professional service website designed to present luxury hospitality and butler services.",
+    url: "https://luxbutlers.co.za/",
+  },
+  {
+    name: "3B Luxury Coaches",
+    description:
+      "A transportation website built to present coach services, routes and travel information.",
+    url: "https://3bluxurycoaches.co.za/",
+  },
+];
+
 export default function Hobbies() {
   return (
     <section
@@ -75,7 +128,7 @@ export default function Hobbies() {
             </span>
           </div>
 
-          <h2 className="text-3xl font-light leading-tight tracking-tight text-[var(--foreground)] md:text-4xl">
+          <h2 className="text-xl font-light leading-tight tracking-tight text-[var(--foreground)] md:text-2xl">
             Interests & <span className="text-cyan-300">Hobbies.</span>
           </h2>
 
@@ -127,12 +180,17 @@ export default function Hobbies() {
         </div>
 
         {/* Closing Statement */}
-
-        <div className="mt-5 rounded-2xl border border-[var(--border)] bg-[var(--surface-soft)] px-5 py-4">
-          <p className="text-center text-sm leading-5 text-[var(--muted)]">
-            I believe that curiosity outside of coding also influences how I
-            approach technology — staying creative, asking questions and looking
-            for better ways to solve problems.
+        <div className="mt-6 rounded-2xl border border-[var(--border)] bg-[var(--surface-soft)] px-5 py-4">
+          <p className="text-sm leading-6 text-[var(--muted)]">
+            One other thing I&apos;ve also worked on a few client websites and
+            digital projects, WordPress-based solutions built around client
+            requirements.{" "}
+            <a
+              href="/client-work"
+              className="whitespace-nowrap font-medium !text-[#50dfd3] transition-colors hover:!text-[#076961]"
+            >
+              See some of that work <span className="ml-1">↗</span>
+            </a>
           </p>
         </div>
       </div>

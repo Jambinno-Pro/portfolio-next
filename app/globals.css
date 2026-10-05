@@ -1565,11 +1565,13 @@ html.light .portfolio-navbar ~ * :focus-visible {
   }
 }
 
-/* =========================================================
-   RESUME SECTION
-   My Journey-inspired structure and spacing
-========================================================= */
-
+/*
+  =========================================================
+  RESUME SECTION
+  My Journey-inspired structure
+  and spacing
+  =========================================================
+  */
 .resume-page {
   position: relative;
   width: 100%;
@@ -1683,7 +1685,7 @@ html.light .portfolio-navbar ~ * :focus-visible {
 
   font-family: Helvetica, Arial, sans-serif;
 
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 300;
 
   line-height: 1.2;
@@ -1853,7 +1855,7 @@ html.light .portfolio-navbar ~ * :focus-visible {
   }
 
   .resume-intro h2 {
-    font-size: 36px;
+    font-size: 24px;
   }
 }
 
@@ -1885,7 +1887,7 @@ html.light .portfolio-navbar ~ * :focus-visible {
   }
 
   .resume-intro h2 {
-    font-size: 28px;
+    font-size: 20px;
   }
 
   .resume-introduction {
@@ -1918,7 +1920,7 @@ html.light .portfolio-navbar ~ * :focus-visible {
   }
 
   .resume-intro h2 {
-    font-size: 25px;
+    font-size: 18px;
   }
 
   .resume-introduction {

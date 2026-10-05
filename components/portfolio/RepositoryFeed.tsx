@@ -22,7 +22,7 @@ export default async function RepositoryFeed() {
               </span>
             </div>
 
-            <h2 className="text-3xl font-light leading-tight tracking-tight text-white md:text-4xl">
+            <h2 className="text-xl font-light leading-tight tracking-tight text-white md:text-2xl">
               GitHub <span className="text-cyan-300">Repositories.</span>
             </h2>
 
@@ -42,19 +42,6 @@ export default async function RepositoryFeed() {
           ) : (
             <RepositoryGrid repositories={repositories} />
           )}
-
-          {/* GitHub profile */}
-          <div className="mt-5 text-center">
-            <a
-              href="https://github.com/Jambinno-Pro"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-white/10 px-5 py-2.5 text-sm font-medium text-slate-300 transition hover:border-cyan-400/30 hover:text-cyan-300"
-            >
-              <FaGithub />
-              View GitHub Profile
-            </a>
-          </div>
         </div>
       </section>
     );

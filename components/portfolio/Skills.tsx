@@ -13,22 +13,15 @@ import {
   SiMongodb,
   SiMysql,
   SiPhp,
-  SiWordpress,
   SiHtml5,
   SiCss,
   SiTailwindcss,
   SiGit,
   SiGithub,
-  SiAngular,
-  SiJquery,
-  SiPython,
   SiPostgresql,
-  SiFirebase,
-  SiSupabase,
   SiVercel,
   SiRender,
   SiDocker,
-  SiFigma,
 } from "react-icons/si";
 
 import { getSkills, type Skill } from "@/lib/skills";
@@ -61,9 +54,10 @@ const skillIcons: Record<string, ElementType> = {
 
   mysql: SiMysql,
 
-  php: SiPhp,
+  postgresql: SiPostgresql,
+  postgres: SiPostgresql,
 
-  wordpress: SiWordpress,
+  php: SiPhp,
 
   html: SiHtml5,
   html5: SiHtml5,
@@ -79,27 +73,11 @@ const skillIcons: Record<string, ElementType> = {
 
   github: SiGithub,
 
-  angular: SiAngular,
-  angularjs: SiAngular,
-
-  jquery: SiJquery,
-
-  python: SiPython,
-
-  postgresql: SiPostgresql,
-  postgres: SiPostgresql,
-
-  firebase: SiFirebase,
-
-  supabase: SiSupabase,
-
   vercel: SiVercel,
 
   render: SiRender,
 
   docker: SiDocker,
-
-  figma: SiFigma,
 };
 
 /* =========================================================
@@ -121,8 +99,6 @@ const categoryIcons: Record<string, ElementType> = {
   tools: Wrench,
   "tools & technologies": Wrench,
   technologies: Wrench,
-
-  design: Layers3,
 };
 
 /* =========================================================
@@ -237,13 +213,13 @@ export default function Skills() {
             </span>
           </div>
 
-          <h2 className="text-3xl font-light leading-tight tracking-tight text-[var(--foreground)] md:text-4xl">
+          <h2 className="text-xl font-light leading-tight tracking-tight text-[var(--foreground)] md:text-2xl">
             Technologies & <span className="text-cyan-300">Skills.</span>
           </h2>
 
           <p className="mt-2 max-w-2xl text-sm leading-5 text-[var(--muted)] md:text-[15px]">
-            Technologies and tools I use to build modern web applications,
-            backend systems and reliable digital solutions.
+            Technologies I use to build modern web applications, backend
+            systems, APIs and reliable database-driven solutions.
           </p>
         </div>
 
@@ -395,8 +371,9 @@ export default function Skills() {
         {!loading && !error && skills.length > 0 && (
           <div className="mt-4 rounded-2xl border border-[var(--border)] bg-[var(--surface-soft)] px-4 py-3">
             <p className="text-center text-sm leading-5 text-[var(--muted)]">
-              My skills continue to evolve as I learn new technologies, build
-              projects and explore better ways of solving problems.
+              My skills continue to evolve as I build software, work with modern
+              technologies and strengthen my expertise in backend development,
+              databases and application architecture.
             </p>
           </div>
         )}

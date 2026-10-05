@@ -15,52 +15,52 @@ import {
 const journeyItems = [
   {
     number: "01",
-    title: "Graphic Design",
+    title: "Creative Problem Solving",
     subtitle: "Where It All Started",
     icon: Palette,
-    text: "My journey started with six years of experience as a Graphic Designer. I learned how to turn ideas into visual experiences, solve creative problems, and communicate through design.",
+    text: "My journey began with six years of experience in Graphic Design, where I developed a strong foundation in problem solving, attention to detail, visual thinking, and turning ideas into practical solutions.",
   },
   {
     number: "02",
-    title: "Discovering Web Design",
-    subtitle: "A New Direction",
+    title: "Discovering Web Development",
+    subtitle: "From Design to Technology",
     icon: Globe,
-    text: "I was encouraged to explore Web Design. At first, I thought it would simply be another form of design. Then I discovered what was happening behind the visuals.",
+    text: "I began exploring Web Development and quickly became interested in more than how websites looked. I wanted to understand how applications worked, how browsers processed code, and what happened behind the interface.",
   },
   {
     number: "03",
     title: "HTML, CSS & JavaScript",
-    subtitle: "Curiosity Became Something More",
+    subtitle: "Building the Foundation",
     icon: Code2,
-    text: "Seeing HTML, CSS and JavaScript sparked my curiosity. I wanted to understand how websites worked, how browsers interpreted code, and how different parts of an application came together.",
+    text: "Learning HTML, CSS and JavaScript turned my curiosity into a technical journey. I started understanding how interfaces are built, how applications respond to users, and how different parts of a web application work together.",
   },
   {
     number: "04",
     title: "Backend Development",
-    subtitle: "Going Behind the Interface",
+    subtitle: "Building Beyond the Interface",
     icon: Server,
-    text: "Before long, I found myself going deeper into backend development. APIs, server-side logic, authentication and application architecture became just as exciting as the frontend.",
+    text: "My focus then moved deeper into backend development. I became interested in server-side logic, REST APIs, authentication, business logic and application architecture, building the systems that power modern applications.",
   },
   {
     number: "05",
-    title: "Databases",
+    title: "Database Engineering",
     subtitle: "Understanding the Data",
     icon: Database,
-    text: "Then came databases. I became interested in how information is stored, structured, retrieved and connected to the applications people use every day.",
+    text: "I developed a strong interest in databases and how applications work with data. I explored data modelling, SQL, relationships, queries, storage and reliable ways of connecting databases to backend systems.",
   },
   {
     number: "06",
     title: "Debugging & Problem Solving",
-    subtitle: "I Enjoy The Challenge",
+    subtitle: "Engineering Through Challenges",
     icon: Bug,
-    text: "Every bug and unexpected error became another opportunity to learn. I enjoy investigating problems, understanding why something fails, and working through the process of finding a solution.",
+    text: "Debugging became an important part of how I develop software. I enjoy investigating errors, understanding why systems fail, tracing problems across applications and working methodically toward reliable solutions.",
   },
   {
     number: "07",
     title: "Software Development",
-    subtitle: "The Journey Continues",
+    subtitle: "Building Practical Solutions",
     icon: Rocket,
-    text: "Today, I'm continuing to grow as a Software Developer, building modern applications while exploring new technologies, contributing to open source, and constantly learning how things work beneath the surface.",
+    text: "Today, I am growing as a Software Developer, building modern web applications, backend systems, RESTful APIs and database solutions. I continue to strengthen my skills across C#, .NET, ASP.NET Core, TypeScript, React, Next.js, Node.js and SQL databases.",
   },
 ];
 
@@ -151,16 +151,17 @@ export default function Journey() {
             My Journey
           </p>
 
-          <h2 className="text-3xl font-light leading-tight tracking-tight text-[var(--foreground)] md:text-4xl">
-            From creativity to{" "}
+          <h2 className="max-w-2xl text-xl font-light leading-tight tracking-tight text-[var(--foreground)] md:text-2xl">
+            From curiosity to{" "}
             <span className="font-normal text-cyan-300">
               software development.
             </span>
           </h2>
 
           <p className="mt-2 max-w-2xl text-sm leading-5 text-[var(--muted)] md:text-[15px]">
-            My journey started in graphic design and gradually took me deeper
-            into web development, backend systems and databases.
+            My journey has taken me from creative problem solving into software
+            development, backend engineering, APIs and databases, with a
+            continued focus on building practical digital solutions.
           </p>
 
           <div className="mt-3 flex items-center gap-3 text-[10px] uppercase tracking-[0.18em] text-[var(--muted-soft)]">
@@ -339,28 +340,27 @@ export default function Journey() {
 
             <div className="relative">
               <p className="mb-2 text-[10px] font-medium uppercase tracking-[0.18em] text-cyan-300">
-                Still Learning. Still Exploring.
+                Still Learning. Still Building.
               </p>
 
               <p className="max-w-4xl text-base font-light leading-6 text-[var(--foreground)] md:text-lg">
-                For me, the journey is not just about learning how to write
-                code. It is about understanding how things work, solving
-                problems, and always wanting to know what is happening behind
-                the scenes.
+                For me, software development is not just about writing code. It
+                is about understanding how systems work, solving problems,
+                designing reliable solutions, and continuously improving how
+                software is built.
               </p>
 
               <p className="mt-3 max-w-4xl text-sm leading-5 text-[var(--muted)] md:text-[15px]">
-                Today, my curiosity is taking me further into{" "}
+                Today, my learning is extending into{" "}
                 <span className="text-[var(--foreground)]">
-                  Cloud Computing{" "}
+                  Cloud Computing
                 </span>
-                learning how applications, services and data can be stored,
-                managed and moved across the cloud. I&apos;m exploring
-                technologies and platforms such as{" "}
-                <span className="text-cyan-300">AWS</span>,{" "}
+                , with a growing interest in how applications, services and data
+                are deployed, managed and scaled. I&apos;m exploring platforms
+                such as <span className="text-cyan-300">AWS</span>,{" "}
                 <span className="text-cyan-300">Google Cloud</span> and{" "}
                 <span className="text-cyan-300">Microsoft Azure</span>, while
-                continuing to discover what comes next.
+                continuing to strengthen my software engineering skills.
               </p>
 
               <div className="mt-4 flex flex-wrap gap-2">

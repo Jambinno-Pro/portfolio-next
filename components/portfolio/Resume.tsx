@@ -352,7 +352,7 @@ function ResumeViewer({
 
           {/* FOOTER */}
           <footer className="resume-document-footer">
-            {resume.title || "Professional Resume"}
+            {resume.title || "Software Developer"}
           </footer>
         </div>
       </div>
@@ -362,9 +362,7 @@ function ResumeViewer({
 
 export default function Resume() {
   const [resume, setResume] = useState<ResumeData | null>(null);
-
   const [loading, setLoading] = useState(true);
-
   const [viewerOpen, setViewerOpen] = useState(false);
 
   useEffect(() => {
@@ -424,38 +422,39 @@ export default function Resume() {
         <div className="resume-background">
           <div className="resume-glow resume-glow-left" />
           <div className="resume-glow resume-glow-right" />
-          {/* Removed background division line */}
         </div>
 
         <div className="resume-container">
           <div className="flex w-full flex-col gap-6 md:flex-row md:items-end md:justify-between">
             {/* Heading - Left */}
             <div className="resume-intro">
-              <p className="resume-eyebrow">Professional Profile</p>
+              <p className="resume-eyebrow">Professional Resume</p>
 
               <h2>
-                Explore my experience and <span>professional journey.</span>
+                Software Development Experience{" "}
+                <span>&amp; Professional Journey.</span>
               </h2>
 
               <p className="resume-introduction">
-                Take a closer look at my experience, skills, education and
-                professional background. My CV is dynamically managed through
-                the backend admin dashboard, allowing the information to be
-                updated centrally and viewed online or downloaded as a PDF.
+                Explore my professional experience, technical skills, education,
+                certifications, and development background. My resume is
+                dynamically managed through the backend, keeping my professional
+                information up to date and available to view or download.
               </p>
             </div>
 
             {/* Resume action - Right */}
             <div className="resume-action flex shrink-0 flex-col items-end gap-3">
               <div className="resume-scroll-hint flex items-center justify-end gap-2">
-                <span>View & Download My CV below</span>
+                <span>View or Download My Resume</span>
+
                 <ArrowDown size={13} className="resume-arrow" />
               </div>
 
               <button
                 type="button"
                 onClick={() => setViewerOpen(true)}
-                className="group inline-flex items-center justify-center gap-2 rounded-full border border-emerald-400/40 bg-emerald-300 px-6 py-3 text-sm font-semibold text-slate-950 shadow-[0_0_22px_rgba(52,211,153,0.12)] transition-all duration-300 hover:-translate-y-0.5 hover:border-emerald-400 hover:bg-emerald-400 hover:shadow-[0_0_30px_rgba(52,211,153,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--background)]"
+                className="group inline-flex items-center justify-center gap-2 rounded-full border border-cyan-400/40 bg-cyan-400 px-6 py-3 text-sm font-semibold text-slate-950 shadow-[0_0_22px_rgba(34,211,238,0.12)] transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-400 hover:bg-cyan-300 hover:shadow-[0_0_30px_rgba(34,211,238,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--background)]"
               >
                 <span>View Resume</span>
 

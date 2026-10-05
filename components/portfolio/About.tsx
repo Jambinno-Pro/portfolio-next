@@ -24,27 +24,28 @@ export default function About() {
               </span>
             </div>
 
-            {/* Heading */}
-            <h2 className="max-w-2xl text-3xl font-light leading-tight tracking-tight text-[var(--foreground)] md:text-4xl">
-              From Idea
-              <span className="text-cyan-400"> to Working Software</span>
+            <h2 className="max-w-2xl text-xl font-light leading-tight tracking-tight text-[var(--foreground)] md:text-2xl">
+              From curiosity to{" "}
+              <span className="font-normal text-cyan-300">
+                software development.
+              </span>
             </h2>
 
             {/* Main paragraph */}
             <p className="mt-2 max-w-2xl text-[15px] leading-5 text-[var(--muted)]">
-              Software Developer focused on building modern web applications,
-              scalable backend systems, RESTful APIs, and reliable database
-              solutions. Experienced with C#, .NET, ASP.NET Core, Node.js,
-              Javascript, TypeScript, Next.js, React, SQL Server, PostgreSQL,
-              MySQL, and MongoDB. Passionate about solving problems, building
-              practical software, and developing maintainable, production-ready
-              applications.
+              I&apos;m a Software Developer focused on building modern web
+              applications, scalable backend systems, RESTful APIs, and reliable
+              database solutions. I work across the stack using C#, .NET,
+              ASP.NET Core, TypeScript, JavaScript, React, Next.js, Node.js, SQL
+              Server, PostgreSQL, MySQL, and MongoDB.
             </p>
 
             {/* Second paragraph */}
             <p className="mt-2 max-w-2xl text-[15px] leading-5 text-[var(--muted-soft)]">
-              I enjoy turning ideas into practical software and continuously
-              improving my skills through real-world projects.
+              My approach combines problem-solving, clean architecture, database
+              design, API development, and practical user-focused solutions. I
+              enjoy turning requirements and ideas into maintainable software
+              that solves real business problems.
             </p>
 
             {/* Buttons */}
@@ -78,7 +79,7 @@ export default function About() {
                   </p>
 
                   <h3 className="mt-0.5 text-lg font-medium text-[var(--foreground)]">
-                    Software Development
+                    Software Engineering
                   </h3>
                 </div>
 
@@ -96,7 +97,7 @@ export default function About() {
                   </p>
 
                   <p className="mt-0.5 text-sm leading-5 text-[var(--muted)]">
-                    React · Next.js · TypeScript · HTML · CSS
+                    React · Next.js · TypeScript · JavaScript
                   </p>
                 </div>
 
@@ -106,7 +107,7 @@ export default function About() {
                   </p>
 
                   <p className="mt-0.5 text-sm leading-5 text-[var(--muted)]">
-                    Node.js · Express · REST APIs · JWT
+                    C# · .NET · ASP.NET Core · Node.js · REST APIs
                   </p>
                 </div>
 
@@ -116,17 +117,17 @@ export default function About() {
                   </p>
 
                   <p className="mt-0.5 text-sm leading-5 text-[var(--muted)]">
-                    MongoDB · Mongoose · MySQL · PostgreSQL
+                    SQL Server · PostgreSQL · MySQL · MongoDB
                   </p>
                 </div>
 
                 <div className="border-t border-[var(--border-soft)] pt-2">
                   <p className="text-[9px] uppercase tracking-[0.17em] text-cyan-400/70">
-                    Development
+                    Engineering
                   </p>
 
                   <p className="mt-0.5 text-sm leading-5 text-[var(--muted)]">
-                    Git · GitHub · API Integration · System Architecture
+                    API Development · Database Design · Git · Docker
                   </p>
                 </div>
               </div>

@@ -31,16 +31,20 @@ const experiences: Experience[] = [
     company: "Emethyst Solutions & Projects",
     icon: Code2,
     description:
-      "Develop and maintain modern web applications and digital platforms with a strong focus on software development, backend systems, APIs, databases, and responsive user experiences.",
+      "Design, develop and maintain modern web applications and software solutions with a strong focus on backend development, REST APIs, databases, business logic and reliable application architecture.",
     responsibilities: [
-      "Developing responsive web applications",
-      "Building backend functionality and REST APIs",
-      "Working with databases and application data",
-      "Integrating APIs and backend services",
-      "Implementing application features and business logic",
-      "Debugging and resolving technical issues",
-      "Improving application performance and reliability",
-      "Working with modern development frameworks and tools",
+      "Developing modern web applications using TypeScript, React and Next.js",
+      "Building backend services and RESTful APIs",
+      "Implementing application business logic and core functionality",
+      "Designing data models and working with application databases",
+      "Working with MongoDB, MySQL, PostgreSQL and SQL-based systems",
+      "Building CRUD operations and data-driven application features",
+      "Implementing authentication and authorization functionality",
+      "Integrating APIs and external services",
+      "Debugging application issues and troubleshooting technical problems",
+      "Improving application performance, reliability and maintainability",
+      "Using Git and modern development workflows for source control",
+      "Working with Docker and modern development environments",
     ],
     technologies: [
       "TypeScript",
@@ -48,10 +52,46 @@ const experiences: Experience[] = [
       "React",
       "Node.js",
       "Express.js",
+      "NestJS",
+      "REST APIs",
+      "JWT",
       "MongoDB",
       "Mongoose",
       "MySQL",
+      "PostgreSQL",
       "SQL",
+      "Git",
+      "Docker",
+    ],
+  },
+
+  {
+    period: "Freelance",
+    type: "Software & Web Development",
+    title: "Web Developer & Digital Solutions Developer",
+    company: "AES",
+    icon: BriefcaseBusiness,
+    description:
+      "Developed practical web solutions for business requirements, combining frontend development, backend functionality, database-driven features and technical problem solving.",
+    responsibilities: [
+      "Developing responsive business web applications",
+      "Building interactive frontend functionality using JavaScript",
+      "Implementing backend functionality using PHP",
+      "Working with application data and database-driven features",
+      "Developing and maintaining website functionality",
+      "Creating structured product and business information systems",
+      "Connecting frontend interfaces with backend functionality",
+      "Troubleshooting and resolving technical issues",
+      "Translating business requirements into practical software solutions",
+      "Maintaining and improving existing web applications",
+    ],
+    technologies: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "PHP",
+      "jQuery",
+      "MySQL",
       "REST APIs",
       "Git",
     ],
@@ -59,50 +99,23 @@ const experiences: Experience[] = [
 
   {
     period: "Freelance",
-    type: "Web Development",
-    title: "Web Developer & Graphic Designer",
-    company: "AES",
-    icon: BriefcaseBusiness,
-    description:
-      "Worked across web development and digital design, creating practical websites and digital solutions while translating business requirements into functional online experiences.",
-    responsibilities: [
-      "Developing and maintaining responsive websites",
-      "Building and updating website functionality",
-      "Creating company profile and product layouts",
-      "Developing structured product categories",
-      "Supporting website content management",
-      "Translating business requirements into digital solutions",
-      "Providing technical and website support",
-    ],
-    technologies: [
-      "HTML5",
-      "CSS3",
-      "JavaScript",
-      "WordPress",
-      "PHP",
-      "jQuery",
-      "Git",
-      "Photoshop",
-      "CorelDRAW",
-    ],
-  },
-
-  {
-    period: "Freelance",
-    type: "Digital Solutions",
-    title: "Web Developer & Digital Solutions Support",
+    type: "Software & Digital Solutions",
+    title: "Web Developer & Digital Solutions Developer",
     company: "Tabby Enterprises",
     icon: Server,
     description:
-      "Developed and maintained modern web platforms and digital solutions for multiple business and community initiatives, combining technical development with practical business requirements.",
+      "Developed and maintained digital platforms for business and community initiatives, focusing on practical web applications, online functionality, business processes and technical problem solving.",
     responsibilities: [
-      "Developing and maintaining business websites",
-      "Building online platforms and digital solutions",
-      "Managing and updating website content",
-      "Implementing website features and functionality",
-      "Supporting online booking and business solutions",
-      "Providing technical support and troubleshooting",
-      "Managing digital platforms and online presence",
+      "Developing and maintaining business web applications",
+      "Building responsive user interfaces and application features",
+      "Implementing backend functionality and data-driven features",
+      "Developing online booking and business functionality",
+      "Managing application content and business data",
+      "Connecting frontend interfaces with backend services",
+      "Troubleshooting application and website issues",
+      "Providing technical support and system maintenance",
+      "Translating business requirements into practical digital solutions",
+      "Supporting multiple business and community-focused digital platforms",
     ],
     projects: [
       "Tabby Boutique",
@@ -113,34 +126,36 @@ const experiences: Experience[] = [
       "HTML5",
       "CSS3",
       "JavaScript",
-      "WordPress",
       "PHP",
       "Node.js",
       "MongoDB",
+      "REST APIs",
+      "Git",
     ],
   },
 
   {
     period: "Warehouse Experience",
-    type: "Inventory & Systems",
+    type: "Inventory & Business Systems",
     title: "Warehouse & Inventory Systems",
     company: "Mahomed Mussa Wholesalers, Ltd.",
     icon: Package,
     description:
-      "Worked with stock management and digital inventory systems, recording stock-in and stock-out transactions while maintaining accurate inventory records.",
+      "Worked with inventory processes and digital stock management systems, gaining practical experience in stock control, data accuracy, inventory movements and business operations.",
     responsibilities: [
       "Recording stock-in and stock-out transactions",
-      "Updating digital inventory records",
-      "Tracking inventory movements",
-      "Maintaining accurate stock information",
+      "Updating and maintaining digital inventory records",
+      "Tracking inventory movements and stock levels",
+      "Maintaining accurate business and inventory data",
       "Working with system-based inventory records",
-      "Supporting day-to-day warehouse operations",
-      "Using technology to manage business information",
+      "Supporting daily warehouse and stock management operations",
+      "Understanding real-world inventory and business workflows",
+      "Working with structured business information and data",
     ],
     technologies: [
       "Inventory Management Systems",
       "Stock Tracking",
-      "Data Entry",
+      "Data Management",
       "Digital Record Keeping",
       "Inventory Data",
       "Database Concepts",
@@ -154,15 +169,15 @@ const experiences: Experience[] = [
     company: "Professional Design Experience",
     icon: Palette,
     description:
-      "Built a strong creative foundation through approximately six years of graphic design experience before transitioning deeper into web and software development.",
+      "Built a strong creative foundation through approximately six years of professional graphic design experience before transitioning into web development and software engineering.",
     responsibilities: [
-      "Branding and visual communication",
-      "Digital and print design",
-      "Layout and composition",
-      "Creating marketing materials",
-      "Creative problem solving",
-      "Working with client requirements",
-      "Translating ideas into visual concepts",
+      "Developing visual concepts based on client requirements",
+      "Creating branding and marketing materials",
+      "Designing digital and print assets",
+      "Working with layouts, typography and visual composition",
+      "Solving creative and communication problems",
+      "Understanding client requirements and translating ideas into visual solutions",
+      "Developing strong attention to detail and visual problem-solving skills",
     ],
     technologies: [
       "Adobe Photoshop",
@@ -225,15 +240,17 @@ export default function Experience() {
             Experience
           </p>
 
-          <h2 className="text-3xl font-light leading-tight tracking-tight text-white md:text-4xl">
+          <h2 className="text-xl font-light leading-tight tracking-tight text-white md:text-2xl">
             Building through{" "}
-            <span className="font-normal text-cyan-300">experience.</span>
+            <span className="font-normal text-cyan-300">
+              software development.
+            </span>
           </h2>
 
           <p className="mt-2 max-w-2xl text-sm leading-5 text-slate-400 md:text-[15px]">
-            My journey from creative design into software development has shaped
-            how I approach technology, problem solving, systems, databases, and
-            user experiences.
+            My professional experience has evolved from creative problem solving
+            into software development, with a growing focus on applications,
+            backend systems, APIs, databases and practical digital solutions.
           </p>
         </div>
 
@@ -269,9 +286,9 @@ export default function Experience() {
                   <div className="relative hidden md:block">
                     <div
                       className={`
-                        relative z-10 flex h-9 w-9 items-center
-                        justify-center rounded-full border
-                        transition-all duration-500
+                        relative z-10 flex h-9 w-9 items-center 
+                        justify-center rounded-full border 
+                        transition-all duration-500 
                         ${
                           isActive
                             ? "scale-110 border-cyan-300 bg-cyan-300/15 text-cyan-300 shadow-[0_0_25px_rgba(103,232,249,0.3)]"
@@ -286,9 +303,9 @@ export default function Experience() {
 
                     <span
                       className={`
-                        absolute left-13 top-2 whitespace-nowrap
-                        text-[11px] tracking-widest
-                        transition-colors duration-500
+                        absolute left-13 top-2 whitespace-nowrap 
+                        text-[11px] tracking-widest 
+                        transition-colors duration-500 
                         ${isActive ? "text-cyan-300" : "text-slate-600"}
                       `}
                     >
@@ -299,22 +316,22 @@ export default function Experience() {
                   {/* Experience card */}
                   <div
                     className={`
-                      group relative overflow-hidden rounded-2xl
-                      border p-4 transition-all duration-700 md:p-5
+                      group relative overflow-hidden rounded-2xl 
+                      border p-4 transition-all duration-700 md:p-5 
                       ${
                         isActive
                           ? "translate-x-1 border-cyan-300/30 bg-cyan-300/[0.045] shadow-[0_0_35px_rgba(103,232,249,0.06)]"
                           : "border-white/[0.08] bg-white/[0.02] opacity-80"
-                      }
-                      hover:translate-x-1 hover:border-cyan-300/20
+                      } 
+                      hover:translate-x-1 hover:border-cyan-300/20 
                     `}
                   >
                     {/* Active side accent */}
                     <div
                       className={`
-                        absolute left-0 top-0 h-full w-[2px]
-                        bg-cyan-300 transition-opacity duration-500
-                        ${isActive ? "opacity-100" : "opacity-0"}
+                        absolute left-0 top-0 h-full w-[2px] 
+                        bg-cyan-300 transition-opacity duration-500 
+                        ${isActive ? "opacity-100" : "opacity-0"} 
                       `}
                     />
 
@@ -322,8 +339,8 @@ export default function Experience() {
                     <div className="mb-3 flex items-center gap-3 md:hidden">
                       <div
                         className={`
-                          flex h-8 w-8 items-center justify-center
-                          rounded-full border
+                          flex h-8 w-8 items-center justify-center 
+                          rounded-full border 
                           ${
                             isActive
                               ? "border-cyan-300 bg-cyan-300/10 text-cyan-300"
@@ -356,9 +373,9 @@ export default function Experience() {
                     {/* Title */}
                     <h3
                       className={`
-                        text-xl font-normal leading-tight
-                        transition-colors duration-500
-                        ${isActive ? "text-white" : "text-slate-300"}
+                        text-xl font-normal leading-tight 
+                        transition-colors duration-500 
+                        ${isActive ? "text-white" : "text-slate-300"} 
                       `}
                     >
                       {experience.title}
@@ -424,12 +441,12 @@ export default function Experience() {
                           <span
                             key={technology}
                             className="
-                              rounded-full border border-white/10
-                              bg-white/[0.025] px-2.5 py-1
-                              text-[11px] text-slate-400
-                              transition-colors duration-300
-                              hover:border-cyan-300/30
-                              hover:text-cyan-300
+                              rounded-full border border-white/10 
+                              bg-white/[0.025] px-2.5 py-1 
+                              text-[11px] text-slate-400 
+                              transition-colors duration-300 
+                              hover:border-cyan-300/30 
+                              hover:text-cyan-300 
                             "
                           >
                             {technology}
@@ -447,8 +464,8 @@ export default function Experience() {
                       <ArrowUpRight
                         size={15}
                         className={`
-                          transition-all duration-300
-                          ${isActive ? "text-cyan-300" : "text-slate-700"}
+                          transition-all duration-300 
+                          ${isActive ? "text-cyan-300" : "text-slate-700"} 
                         `}
                       />
                     </div>
@@ -470,16 +487,17 @@ export default function Experience() {
               </p>
 
               <p className="max-w-4xl text-base font-light leading-6 text-slate-300 md:text-lg">
-                My experience has taken me from design and digital solutions
-                into software development, where I now focus on building
-                applications, APIs, databases, and practical systems.
+                My experience has taken me from creative problem solving into
+                software development, where I now focus on building
+                applications, APIs, databases and practical systems.
               </p>
 
               <p className="mt-3 max-w-4xl text-sm leading-5 text-slate-400 md:text-[15px]">
-                I approach development with both a creative and technical
-                mindset — considering not only how an application looks, but how
-                it works, how its data is structured, how systems communicate,
-                and how technology can solve real business problems.
+                I approach software development with both a creative and
+                technical mindset — considering not only how an application
+                works, but how its data is structured, how systems communicate,
+                how problems can be solved efficiently, and how technology can
+                create practical value for businesses and users.
               </p>
             </div>
           </div>

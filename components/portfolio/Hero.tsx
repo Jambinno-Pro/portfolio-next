@@ -25,8 +25,8 @@ export default function Hero() {
       <div className="pointer-events-none absolute left-[8%] top-[25%] h-28 w-28 rounded-full bg-emerald-400/[0.025] blur-[65px]" />
 
       {/* =========================================================
-    ENHANCED SPARKLES & PARTICLES
-========================================================= */}
+          ENHANCED SPARKLES & PARTICLES
+      ========================================================= */}
 
       <div className="hero-particle absolute left-[5%] top-[18%] h-2 w-2 rounded-full bg-cyan-200" />
       <div className="hero-particle particle-delay-1 absolute left-[12%] top-[35%] h-1.5 w-1.5 rounded-full bg-emerald-200" />
@@ -51,21 +51,27 @@ export default function Hero() {
 
       {/* Cross-shaped sparkles */}
       <div className="hero-sparkle absolute left-[15%] top-[55%]">✦</div>
+
       <div className="hero-sparkle sparkle-delay-1 absolute left-[28%] top-[17%]">
         ✧
       </div>
+
       <div className="hero-sparkle sparkle-delay-2 absolute right-[15%] top-[54%]">
         ✦
       </div>
+
       <div className="hero-sparkle sparkle-delay-3 absolute right-[30%] top-[21%]">
         ✧
       </div>
+
       <div className="hero-sparkle sparkle-delay-1 absolute left-[38%] top-[65%]">
         ✦
       </div>
+
       <div className="hero-sparkle sparkle-delay-2 absolute right-[39%] top-[62%]">
         ✧
       </div>
+
       {/* =========================================================
           HERO CONTENT
       ========================================================= */}
@@ -81,7 +87,7 @@ export default function Hero() {
           <div className="relative h-24 w-24 overflow-hidden rounded-full border-[4px] border-emerald-300/80 bg-[var(--surface)] shadow-[0_0_30px_rgba(110,231,183,0.14)] md:h-28 md:w-28">
             <Image
               src="/inno.jpg"
-              alt="Innocent Jambaya"
+              alt="Innocent Jambaya — Software Developer"
               fill
               priority
               className="object-cover"
@@ -100,13 +106,13 @@ export default function Hero() {
           </h1>
 
           <p className="mt-1 text-[11px] font-medium uppercase tracking-[0.28em] text-cyan-400">
-            Software Developer || Full Stack & Backend Developer
+            Software Developer • Full-Stack & Backend
           </p>
 
           <p className="mx-auto mt-2 max-w-2xl text-sm leading-5 text-[var(--muted)] md:text-[15px]">
-            Building modern web applications, scalable backend systems, and
-            reliable database solutions turning ideas into digital products that
-            actually work.
+            Building modern web applications, scalable backend systems, RESTful
+            APIs, and reliable database solutions with a focus on clean,
+            maintainable, and practical software.
           </p>
         </div>
 
