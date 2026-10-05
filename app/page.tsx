@@ -127,7 +127,7 @@ export default function Home() {
 
               <span className="eyebrow-dot">•</span>
 
-              <span>Web Developer</span>
+              <span>Full Stack & Backend Developer</span>
             </div>
 
             <h1>
@@ -142,10 +142,10 @@ export default function Home() {
 
             <p className="hero-description">
               I’m a Software Developer focused on building accessible,
-              high-performance web experiences with React, TypeScript, and
-              Next.js. I also build scalable backend systems and reliable
-              database solutions, turning ideas into modern, production-ready
-              digital products.
+              high-performance web experiences with C#, .Net, React, Javascript,
+              ASP.NET, TypeScript, Next.js, Node.js. I also build scalable
+              backend systems and reliable database solutions, turning ideas
+              into modern, production-ready digital products.
             </p>
 
             {/* =================================================
@@ -160,7 +160,7 @@ export default function Home() {
               </a>
 
               <a
-                href="mailto:jambinocreations@gmail.com"
+                href="mailto:jambinnocreations@gmail.com"
                 className="secondary-button"
               >
                 <Mail size={15} />
