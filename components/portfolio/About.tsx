@@ -32,19 +32,19 @@ export default function About() {
 
             {/* Main paragraph */}
             <p className="mt-2 max-w-2xl text-[15px] leading-5 text-[var(--muted)]">
-              I’m a Software Developer who builds practical digital solutions
-              across the frontend and backend. I turn complex requirements into
-              clean interfaces, reliable systems, and connected applications
-              using modern technologies to solve real-world problems. Think.
-              Build. Ship.
+              Software Developer focused on building modern web applications,
+              scalable backend systems, RESTful APIs, and reliable database
+              solutions. Experienced with C#, .NET, ASP.NET Core, Node.js,
+              Javascript, TypeScript, Next.js, React, SQL Server, PostgreSQL,
+              MySQL, and MongoDB. Passionate about solving problems, building
+              practical software, and developing maintainable, production-ready
+              applications.
             </p>
 
             {/* Second paragraph */}
             <p className="mt-2 max-w-2xl text-[15px] leading-5 text-[var(--muted-soft)]">
-              I enjoy solving complex challenges, learning continuously, and
-              turning ideas into products that work. From concept to deployment,
-              I focus on building with purpose, writing better code, and
-              creating meaningful digital experiences.
+              I enjoy turning ideas into practical software and continuously
+              improving my skills through real-world projects.
             </p>
 
             {/* Buttons */}

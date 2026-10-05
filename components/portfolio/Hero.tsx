@@ -100,7 +100,7 @@ export default function Hero() {
           </h1>
 
           <p className="mt-1 text-[11px] font-medium uppercase tracking-[0.28em] text-cyan-400">
-            Software Developer
+            Software Developer || Full Stack & Backend Developer
           </p>
 
           <p className="mx-auto mt-2 max-w-2xl text-sm leading-5 text-[var(--muted)] md:text-[15px]">
