@@ -3,10 +3,10 @@
 import { GraduationCap, Award, BookOpen, CheckCircle2 } from "lucide-react";
 
 const education = [
-  // {
-  //   school: "University of South Africa (UNISA)",
-  //   achievement: "Diploma in Information Technology — In Progress",
-  // },
+  {
+    school: "University of South Africa (UNISA)",
+    achievement: "Diploma in Information Technology — In Progress",
+  },
   {
     school: "Chibuwe High School",
     achievement: "O'Level",
