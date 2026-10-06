@@ -24,10 +24,12 @@ export default function About() {
               </span>
             </div>
 
+            {/* Heading */}
             <h2 className="max-w-2xl text-xl font-light leading-tight tracking-tight text-[var(--foreground)] md:text-2xl">
-              From curiosity to{" "}
-              <span className="font-normal text-cyan-300">
-                software development.
+              Software Developer
+              <span className="text-cyan-400">
+                {" "}
+                Building Practical Solutions
               </span>
             </h2>
 
