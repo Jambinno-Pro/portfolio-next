@@ -81,7 +81,7 @@ export default function About() {
                   </p>
 
                   <h3 className="mt-0.5 text-lg font-medium text-[var(--foreground)]">
-                    Software Engineering
+                    Software Developer
                   </h3>
                 </div>
 
@@ -125,7 +125,7 @@ export default function About() {
 
                 <div className="border-t border-[var(--border-soft)] pt-2">
                   <p className="text-[9px] uppercase tracking-[0.17em] text-cyan-400/70">
-                    Engineering
+                    Solutions
                   </p>
 
                   <p className="mt-0.5 text-sm leading-5 text-[var(--muted)]">
