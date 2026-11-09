@@ -2414,7 +2414,7 @@ html.light .resume-toolbar-title {
 
 /* =========================================================
    RESUME PDF / PRINT
-   A4 | Two-column layout | Natural page pagination
+   Uses existing ResumeViewer
 ========================================================= */
 
 @page {
@@ -2423,27 +2423,8 @@ html.light .resume-toolbar-title {
 }
 
 @media print {
-  /* =====================================================
-     1. RESET THE PRINT DOCUMENT
-  ===================================================== */
-
   html,
-  body {
-    width: 100% !important;
-    height: auto !important;
-    min-height: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow: visible !important;
-    background: #ffffff !important;
-  }
-
-  body.print-resume {
-    position: relative !important;
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-  }
-
+  body,
   #root {
     width: 100% !important;
     height: auto !important;
@@ -2451,117 +2432,88 @@ html.light .resume-toolbar-title {
     margin: 0 !important;
     padding: 0 !important;
     overflow: visible !important;
+    background: #fff !important;
   }
 
-  /* =====================================================
-     2. REMOVE EVERYTHING OUTSIDE THE RESUME VIEWER
-
-     Keep only the DOM branch containing the viewer.
-     This prevents hidden website content from creating
-     additional printed pages.
-  ===================================================== */
-
-  body.print-resume > *:not(#root) {
-    display: none !important;
+  /* Hide everything outside the resume viewer */
+  body.print-resume * {
+    visibility: hidden !important;
   }
 
-  body.print-resume #root > *:not(:has(.resume-viewer-overlay)) {
-    display: none !important;
+  /* Show the resume viewer and its contents */
+  body.print-resume .resume-viewer-overlay,
+  body.print-resume .resume-viewer-overlay * {
+    visibility: visible !important;
   }
 
-  body.print-resume
-    #root
-    :has(.resume-viewer-overlay)
-    > *:not(:has(.resume-viewer-overlay)):not(.resume-viewer-overlay) {
-    display: none !important;
-  }
-
-  /* =====================================================
-     3. RESUME VIEWER
-  ===================================================== */
-
+  /* Resume viewer */
   body.print-resume .resume-viewer-overlay {
-    position: static !important;
-    inset: auto !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
     display: block !important;
     width: 100% !important;
     height: auto !important;
     min-height: 0 !important;
-    max-height: none !important;
     margin: 0 !important;
     padding: 0 !important;
     overflow: visible !important;
-    background: #ffffff !important;
+    background: #fff !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
   }
 
   body.print-resume .resume-viewer-container {
-    display: block !important;
     width: 100% !important;
+    max-width: none !important;
     height: auto !important;
     min-height: 0 !important;
-    max-height: none !important;
-    max-width: none !important;
     margin: 0 !important;
     padding: 0 !important;
     overflow: visible !important;
   }
 
-  /* Hide the toolbar */
+  /* Hide toolbar */
   body.print-resume .resume-toolbar {
     display: none !important;
   }
 
-  /* =====================================================
-     4. RESUME DOCUMENT
-  ===================================================== */
-
+  /* Resume document */
   body.print-resume .resume-document {
     display: block !important;
     position: static !important;
     width: 100% !important;
+    max-width: none !important;
     height: auto !important;
     min-height: 0 !important;
-    max-height: none !important;
-    max-width: none !important;
     margin: 0 !important;
     padding: 0 !important;
     overflow: visible !important;
     border: none !important;
     border-radius: 0 !important;
     box-shadow: none !important;
-    background: #ffffff !important;
+    background: #fff !important;
     color: #171717 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
 
-  /* =====================================================
-     5. HEADER
-  ===================================================== */
-
+  /* Header */
   body.print-resume .resume-document-header {
     display: flex !important;
     flex-direction: row !important;
     justify-content: space-between !important;
     align-items: flex-start !important;
     gap: 8mm !important;
-    width: 100% !important;
-    height: auto !important;
-    min-height: 0 !important;
     padding: 10mm 8mm 8mm !important;
-    background: #ffffff !important;
-    border-bottom: 2px solid #222222 !important;
+    background: #fff !important;
+    border-bottom: 2px solid #222 !important;
     box-sizing: border-box !important;
-  }
-
-  body.print-resume .resume-header-left {
-    flex: 1 !important;
-    min-width: 0 !important;
   }
 
   body.print-resume .resume-header-left h1 {
     font-size: 25pt !important;
-    line-height: 1.15 !important;
   }
 
   body.print-resume .resume-title {
@@ -2569,10 +2521,8 @@ html.light .resume-toolbar-title {
   }
 
   body.print-resume .resume-contact-details {
-    display: flex !important;
     align-items: flex-end !important;
     min-width: 0 !important;
-    max-width: 48% !important;
   }
 
   body.print-resume .resume-contact-details a,
@@ -2582,57 +2532,39 @@ html.light .resume-toolbar-title {
     text-align: right !important;
   }
 
-  /* =====================================================
-     6. TWO-COLUMN CONTENT
-  ===================================================== */
-
+  /* Two-column content */
   body.print-resume .resume-document-content {
     display: grid !important;
     grid-template-columns: minmax(0, 1fr) 70mm !important;
     align-items: start !important;
-    width: 100% !important;
     height: auto !important;
     min-height: 0 !important;
-    max-height: none !important;
     overflow: visible !important;
-    box-sizing: border-box !important;
   }
 
   body.print-resume .resume-main-column {
     height: auto !important;
     min-height: 0 !important;
-    max-height: none !important;
     padding: 8mm 7mm 8mm 8mm !important;
     overflow: visible !important;
-    box-sizing: border-box !important;
   }
 
   body.print-resume .resume-sidebar {
     height: auto !important;
     min-height: 0 !important;
-    max-height: none !important;
     padding: 8mm 6mm !important;
     border-left: 1px solid #dedede !important;
     border-top: none !important;
     background: #f7f7f7 !important;
     overflow: visible !important;
-    box-sizing: border-box !important;
   }
 
-  /* =====================================================
-     7. NATURAL PAGINATION
-  ===================================================== */
-
+  /* Natural page breaks */
   body.print-resume .resume-document,
   body.print-resume .resume-document-content,
   body.print-resume .resume-main-column,
-  body.print-resume .resume-sidebar,
-  body.print-resume .resume-section {
-    break-before: auto !important;
-    break-after: auto !important;
+  body.print-resume .resume-sidebar {
     break-inside: auto !important;
-    page-break-before: auto !important;
-    page-break-after: auto !important;
     page-break-inside: auto !important;
   }
 
@@ -2648,10 +2580,7 @@ html.light .resume-toolbar-title {
     page-break-after: avoid !important;
   }
 
-  /* =====================================================
-     8. TYPOGRAPHY
-  ===================================================== */
-
+  /* Typography */
   body.print-resume .resume-section-heading h2 {
     font-size: 10pt !important;
   }
@@ -2682,25 +2611,20 @@ html.light .resume-toolbar-title {
     font-size: 7.5pt !important;
   }
 
-  /* =====================================================
-     9. FOOTER
-  ===================================================== */
-
+  /* Footer */
   body.print-resume .resume-document-footer {
     padding: 4mm 8mm !important;
     background: #f7f7f7 !important;
     font-size: 8pt !important;
   }
 
-  /* =====================================================
-     10. COLORS AND ANIMATIONS
-  ===================================================== */
-
+  /* Monochrome */
   body.print-resume .resume-section-heading svg,
   body.print-resume .resume-contact-details svg {
-    color: #333333 !important;
+    color: #333 !important;
   }
 
+  /* Disable animations */
   body.print-resume .resume-arrow {
     animation: none !important;
   }
