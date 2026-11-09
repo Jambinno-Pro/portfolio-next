@@ -157,31 +157,64 @@ export default function Hero() {
 
       <style jsx>{`
         .hero-section {
+          isolation: isolate;
           background:
             radial-gradient(
-              circle at 50% 42%,
-              rgba(103, 232, 249, 0.075),
-              transparent 45%
+              ellipse at 50% 40%,
+              rgba(103, 232, 249, 0.035),
+              transparent 48%
             ),
             radial-gradient(
-              circle at 12% 40%,
-              rgba(52, 211, 153, 0.055),
-              transparent 30%
+              ellipse at 12% 45%,
+              rgba(52, 211, 153, 0.025),
+              transparent 32%
             ),
             radial-gradient(
-              circle at 88% 45%,
-              rgba(103, 232, 249, 0.055),
-              transparent 30%
+              ellipse at 88% 45%,
+              rgba(103, 232, 249, 0.025),
+              transparent 32%
             ),
             var(--background);
         }
 
+        /* SUBTLE BACKGROUND GLOW */
+
+        .hero-section::before,
+        .hero-section::after {
+          content: "";
+          position: absolute;
+          pointer-events: none;
+          border-radius: 50%;
+          filter: blur(120px);
+          z-index: -1;
+        }
+
+        .hero-section::before {
+          width: 420px;
+          height: 420px;
+          top: 5%;
+          left: -180px;
+          background: rgba(52, 211, 153, 0.035);
+          animation: glowDrift 16s ease-in-out infinite alternate;
+        }
+
+        .hero-section::after {
+          width: 480px;
+          height: 480px;
+          right: -200px;
+          bottom: 0;
+          background: rgba(103, 232, 249, 0.04);
+          animation: glowDrift 18s ease-in-out infinite alternate-reverse;
+        }
+
+        /* MAIN GRID */
+
         .hero-grid {
           background-image:
-            linear-gradient(rgba(103, 232, 249, 0.095) 1px, transparent 1px),
+            linear-gradient(rgba(103, 232, 249, 0.075) 1px, transparent 1px),
             linear-gradient(
               90deg,
-              rgba(103, 232, 249, 0.095) 1px,
+              rgba(103, 232, 249, 0.075) 1px,
               transparent 1px
             );
           background-size: 50px 50px;
@@ -202,15 +235,18 @@ export default function Hero() {
             transparent 100%
           );
 
-          opacity: 0.85;
+          opacity: 0.55;
+          animation: gridFade 10s ease-in-out infinite alternate;
         }
+
+        /* FINE GRID */
 
         .hero-grid-small {
           background-image:
-            linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+            linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
             linear-gradient(
               90deg,
-              rgba(255, 255, 255, 0.035) 1px,
+              rgba(255, 255, 255, 0.025) 1px,
               transparent 1px
             );
           background-size: 12px 12px;
@@ -231,19 +267,18 @@ export default function Hero() {
             transparent 100%
           );
 
-          opacity: 0.3;
+          opacity: 0.15;
         }
 
         /* PARTICLES */
 
         .hero-particle {
           z-index: 1;
+          opacity: 0.25;
           box-shadow:
-            0 0 7px rgba(103, 232, 249, 0.9),
-            0 0 15px rgba(103, 232, 249, 0.55),
-            0 0 25px rgba(52, 211, 153, 0.25);
-
-          animation: particleFloat 4.5s ease-in-out infinite;
+            0 0 3px rgba(103, 232, 249, 0.35),
+            0 0 7px rgba(103, 232, 249, 0.15);
+          animation: particleFloat 5.5s ease-in-out infinite;
         }
 
         .particle-delay-1 {
@@ -263,17 +298,16 @@ export default function Hero() {
         .hero-sparkle {
           position: absolute;
           z-index: 1;
-          color: rgba(165, 243, 252, 0.95);
-          font-size: 19px;
+          color: rgba(165, 243, 252, 0.45);
+          font-size: 13px;
           line-height: 1;
           pointer-events: none;
 
           text-shadow:
-            0 0 5px rgba(103, 232, 249, 0.9),
-            0 0 12px rgba(103, 232, 249, 0.65),
-            0 0 22px rgba(52, 211, 153, 0.4);
+            0 0 4px rgba(103, 232, 249, 0.25),
+            0 0 8px rgba(103, 232, 249, 0.12);
 
-          animation: sparklePulse 3.5s ease-in-out infinite;
+          animation: sparklePulse 4.5s ease-in-out infinite;
         }
 
         .sparkle-delay-1 {
@@ -292,12 +326,11 @@ export default function Hero() {
 
         .hero-diamond {
           z-index: 1;
+          opacity: 0.15;
           box-shadow:
-            0 0 8px rgba(103, 232, 249, 0.3),
-            0 0 16px rgba(103, 232, 249, 0.15),
-            inset 0 0 6px rgba(103, 232, 249, 0.1);
-
-          animation: diamondFloat 5.5s ease-in-out infinite;
+            0 0 4px rgba(103, 232, 249, 0.15),
+            inset 0 0 4px rgba(103, 232, 249, 0.05);
+          animation: diamondFloat 6.5s ease-in-out infinite;
         }
 
         .diamond-delay-1 {
@@ -336,39 +369,59 @@ export default function Hero() {
         @keyframes particleFloat {
           0%,
           100% {
-            opacity: 0.45;
-            transform: translateY(0) scale(0.85);
+            opacity: 0.12;
+            transform: translate3d(0, 0, 0) scale(0.85);
           }
 
           50% {
-            opacity: 1;
-            transform: translateY(-10px) scale(1.25);
+            opacity: 0.4;
+            transform: translate3d(0, -7px, 0) scale(1.1);
           }
         }
 
         @keyframes sparklePulse {
           0%,
           100% {
-            opacity: 0.4;
-            transform: scale(0.75) rotate(0deg);
+            opacity: 0.12;
+            transform: scale(0.85) rotate(0deg);
           }
 
           50% {
-            opacity: 1;
-            transform: scale(1.2) rotate(15deg);
+            opacity: 0.38;
+            transform: scale(1.05) rotate(10deg);
           }
         }
 
         @keyframes diamondFloat {
           0%,
           100% {
-            opacity: 0.55;
+            opacity: 0.1;
             transform: rotate(45deg) translateY(0) scale(0.9);
           }
 
           50% {
-            opacity: 1;
-            transform: rotate(45deg) translateY(-9px) scale(1.1);
+            opacity: 0.25;
+            transform: rotate(45deg) translateY(-5px) scale(1.05);
+          }
+        }
+
+        @keyframes glowDrift {
+          from {
+            transform: translate3d(0, 0, 0) scale(1);
+          }
+
+          to {
+            transform: translate3d(20px, -15px, 0) scale(1.08);
+          }
+        }
+
+        @keyframes gridFade {
+          from {
+            opacity: 0.4;
+          }
+
+          to {
+            opacity: 0.6;
           }
         }
 
@@ -377,7 +430,10 @@ export default function Hero() {
         @media (prefers-reduced-motion: reduce) {
           .hero-particle,
           .hero-diamond,
-          .hero-sparkle {
+          .hero-sparkle,
+          .hero-grid,
+          .hero-section::before,
+          .hero-section::after {
             animation: none !important;
           }
         }
