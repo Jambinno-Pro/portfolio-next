@@ -2411,3 +2411,185 @@ html.light .resume-toolbar-title {
     padding: 14px 20px;
   }
 }
+
+/* =========================================================
+   RESUME PDF / PRINT
+   Uses the existing ResumeViewer layout
+========================================================= */
+
+@page {
+  size: A4;
+  margin: 10mm;
+}
+
+@media print {
+  html,
+  body {
+    width: 100%;
+    min-width: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    overflow: visible !important;
+  }
+
+  body.print-resume * {
+    visibility: hidden !important;
+  }
+
+  body.print-resume .resume-viewer-overlay,
+  body.print-resume .resume-viewer-overlay * {
+    visibility: visible !important;
+  }
+
+  body.print-resume .resume-viewer-overlay {
+    position: absolute !important;
+    inset: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    background: #ffffff !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  body.print-resume .resume-viewer-container {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Hide toolbar and buttons */
+  body.print-resume .resume-toolbar {
+    display: none !important;
+  }
+
+  /* Resume document */
+  body.print-resume .resume-document {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background: #ffffff !important;
+    color: #171717 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Preserve the existing document header */
+  body.print-resume .resume-document-header {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    gap: 8mm !important;
+    padding: 10mm 8mm 8mm !important;
+    background: #ffffff !important;
+    border-bottom: 2px solid #222222 !important;
+  }
+
+  body.print-resume .resume-header-left h1 {
+    font-size: 25pt !important;
+  }
+
+  body.print-resume .resume-title {
+    font-size: 12pt !important;
+  }
+
+  body.print-resume .resume-contact-details {
+    align-items: flex-end !important;
+    min-width: 0 !important;
+  }
+
+  body.print-resume .resume-contact-details a,
+  body.print-resume .resume-contact-details div {
+    justify-content: flex-end !important;
+    font-size: 8pt !important;
+    text-align: right !important;
+  }
+
+  /* Preserve two-column layout */
+  body.print-resume .resume-document-content {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 70mm !important;
+    min-width: 0 !important;
+  }
+
+  body.print-resume .resume-main-column {
+    padding: 8mm 7mm 8mm 8mm !important;
+  }
+
+  body.print-resume .resume-sidebar {
+    padding: 8mm 6mm !important;
+    border-left: 1px solid #dedede !important;
+    border-top: none !important;
+    background: #f7f7f7 !important;
+  }
+
+  /* Prevent individual entries from splitting */
+  body.print-resume .resume-experience-item,
+  body.print-resume .resume-sidebar-item,
+  body.print-resume .resume-skill-item {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  body.print-resume .resume-section-heading {
+    break-after: avoid !important;
+    page-break-after: avoid !important;
+  }
+
+  body.print-resume .resume-section-heading h2 {
+    font-size: 10pt !important;
+  }
+
+  body.print-resume .resume-profile-text {
+    font-size: 9pt !important;
+    line-height: 1.6 !important;
+  }
+
+  body.print-resume .resume-experience-heading h3 {
+    font-size: 10pt !important;
+  }
+
+  body.print-resume .resume-description {
+    font-size: 8.5pt !important;
+    line-height: 1.6 !important;
+  }
+
+  body.print-resume .resume-item-title {
+    font-size: 8.5pt !important;
+  }
+
+  body.print-resume .resume-item-accent {
+    font-size: 8pt !important;
+  }
+
+  body.print-resume .resume-item-period {
+    font-size: 7.5pt !important;
+  }
+
+  body.print-resume .resume-document-footer {
+    padding: 4mm 8mm !important;
+    background: #f7f7f7 !important;
+    font-size: 8pt !important;
+  }
+
+  /* Preserve monochrome colors */
+  body.print-resume .resume-section-heading svg,
+  body.print-resume .resume-contact-details svg {
+    color: #333333 !important;
+  }
+
+  /* Remove website-only animations */
+  body.print-resume .resume-arrow {
+    animation: none !important;
+  }
+}

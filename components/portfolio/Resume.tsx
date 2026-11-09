@@ -16,7 +16,6 @@ import {
 } from "lucide-react";
 
 import { getResume, Resume as ResumeData } from "@/lib/resume";
-import api from "@/lib/api";
 
 function ResumeViewer({
   resume,
@@ -27,41 +26,36 @@ function ResumeViewer({
 }) {
   const [downloading, setDownloading] = useState(false);
 
-  const downloadPdf = async () => {
+  // PRINT / DOWNLOAD RESUME
+  const downloadPdf = () => {
     if (downloading) return;
 
-    try {
-      setDownloading(true);
+    setDownloading(true);
 
-      const response = await api.get("/resume/download", {
-        responseType: "blob",
-        headers: {
-          "Cache-Control": "no-cache",
-        },
+    document.body.classList.add("print-resume");
+
+    // Allow print styles to apply before opening the dialog.
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        window.print();
       });
-
-      const blob = new Blob([response.data], {
-        type: "application/pdf",
-      });
-
-      const url = window.URL.createObjectURL(blob);
-      const link = document.createElement("a");
-
-      link.href = url;
-      link.download = `${resume.fullName || "Resume"}-Resume.pdf`;
-
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-
-      window.URL.revokeObjectURL(url);
-    } catch (error) {
-      console.error("Resume PDF download failed:", error);
-      alert("Unable to download the Resume PDF. Please try again.");
-    } finally {
-      setDownloading(false);
-    }
+    });
   };
+
+  // Restore the page after printing or cancelling.
+  useEffect(() => {
+    const handleAfterPrint = () => {
+      document.body.classList.remove("print-resume");
+      setDownloading(false);
+    };
+
+    window.addEventListener("afterprint", handleAfterPrint);
+
+    return () => {
+      window.removeEventListener("afterprint", handleAfterPrint);
+      document.body.classList.remove("print-resume");
+    };
+  }, []);
 
   const experience = Array.isArray(resume.experience) ? resume.experience : [];
 
@@ -93,7 +87,7 @@ function ResumeViewer({
             >
               <Download size={16} />
 
-              <span>{downloading ? "Downloading..." : "Download PDF"}</span>
+              <span>{downloading ? "Preparing PDF..." : "Download PDF"}</span>
             </button>
 
             <button
@@ -148,11 +142,11 @@ function ResumeViewer({
             </div>
           </header>
 
-          {/* CONTENT */}
+          {/* DOCUMENT CONTENT */}
           <div className="resume-document-content">
             {/* LEFT COLUMN */}
             <main className="resume-main-column">
-              {/* PROFILE */}
+              {/* PROFESSIONAL PROFILE */}
               <section className="resume-section">
                 <div className="resume-section-heading">
                   <BriefcaseBusiness size={16} />
@@ -168,7 +162,7 @@ function ResumeViewer({
                 )}
               </section>
 
-              {/* EXPERIENCE */}
+              {/* PROFESSIONAL EXPERIENCE */}
               <section className="resume-section">
                 <div className="resume-section-heading">
                   <BriefcaseBusiness size={16} />
@@ -213,7 +207,7 @@ function ResumeViewer({
               </section>
             </main>
 
-            {/* RIGHT COLUMN */}
+            {/* RIGHT SIDEBAR */}
             <aside className="resume-sidebar">
               {/* EDUCATION */}
               <section className="resume-section">
@@ -365,6 +359,7 @@ export default function Resume() {
   const [loading, setLoading] = useState(true);
   const [viewerOpen, setViewerOpen] = useState(false);
 
+  // LOAD DYNAMIC RESUME DATA
   useEffect(() => {
     let mounted = true;
 
@@ -413,12 +408,8 @@ export default function Resume() {
 
   return (
     <>
-      {/* =====================================================
-          RESUME INTRO
-      ===================================================== */}
-
+      {/* RESUME INTRODUCTION */}
       <section id="resume" className="resume-page">
-        {/* Background atmosphere */}
         <div className="resume-background">
           <div className="resume-glow resume-glow-left" />
           <div className="resume-glow resume-glow-right" />
@@ -426,7 +417,7 @@ export default function Resume() {
 
         <div className="resume-container">
           <div className="flex w-full flex-col gap-6 md:flex-row md:items-end md:justify-between">
-            {/* Heading - Left */}
+            {/* INTRODUCTION */}
             <div className="resume-intro">
               <p className="resume-eyebrow">Professional Resume</p>
 
@@ -443,7 +434,7 @@ export default function Resume() {
               </p>
             </div>
 
-            {/* Resume action - Right */}
+            {/* VIEW RESUME BUTTON */}
             <div className="resume-action flex shrink-0 flex-col items-end gap-3">
               <div className="resume-scroll-hint flex items-center justify-end gap-2">
                 <span>View or Download My Resume</span>
@@ -468,10 +459,7 @@ export default function Resume() {
         </div>
       </section>
 
-      {/* =====================================================
-          RESUME VIEWER
-      ===================================================== */}
-
+      {/* RESUME VIEWER */}
       {viewerOpen && (
         <ResumeViewer resume={resume} onClose={() => setViewerOpen(false)} />
       )}
