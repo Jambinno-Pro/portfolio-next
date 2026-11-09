@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { createPortal } from "react-dom";
+
 import {
   BriefcaseBusiness,
   Download,
@@ -25,16 +27,21 @@ function ResumeViewer({
   onClose: () => void;
 }) {
   const [downloading, setDownloading] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  // Ensure the portal is only rendered in the browser.
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // PRINT / DOWNLOAD RESUME
   const downloadPdf = () => {
     if (downloading) return;
 
     setDownloading(true);
-
     document.body.classList.add("print-resume");
 
-    // Allow print styles to apply before opening the dialog.
+    // Give the browser time to apply print styles.
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
         window.print();
@@ -42,7 +49,7 @@ function ResumeViewer({
     });
   };
 
-  // Restore the page after printing or cancelling.
+  // Restore the website after printing or cancelling.
   useEffect(() => {
     const handleAfterPrint = () => {
       document.body.classList.remove("print-resume");
@@ -69,7 +76,9 @@ function ResumeViewer({
 
   const languages = Array.isArray(resume.languages) ? resume.languages : [];
 
-  return (
+  if (!mounted) return null;
+
+  return createPortal(
     <div className="resume-viewer-overlay">
       <div className="resume-viewer-container">
         {/* DOWNLOAD TOOLBAR */}
@@ -86,7 +95,6 @@ function ResumeViewer({
               className="resume-download-button"
             >
               <Download size={16} />
-
               <span>{downloading ? "Preparing PDF..." : "Download PDF"}</span>
             </button>
 
@@ -350,7 +358,8 @@ function ResumeViewer({
           </footer>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }
 
@@ -392,9 +401,7 @@ export default function Resume() {
     };
   }, []);
 
-  const hasResume = useMemo(() => {
-    return Boolean(resume);
-  }, [resume]);
+  const hasResume = useMemo(() => Boolean(resume), [resume]);
 
   if (loading) {
     return <div className="resume-loading">Loading resume...</div>;
@@ -438,7 +445,6 @@ export default function Resume() {
             <div className="resume-action flex shrink-0 flex-col items-end gap-3">
               <div className="resume-scroll-hint flex items-center justify-end gap-2">
                 <span>View or Download My Resume</span>
-
                 <ArrowDown size={13} className="resume-arrow" />
               </div>
 

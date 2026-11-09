@@ -2412,11 +2412,6 @@ html.light .resume-toolbar-title {
   }
 }
 
-/* =========================================================
-   RESUME PDF / PRINT
-   Uses existing ResumeViewer
-========================================================= */
-
 @page {
   size: A4;
   margin: 10mm;
@@ -2424,8 +2419,7 @@ html.light .resume-toolbar-title {
 
 @media print {
   html,
-  body,
-  #root {
+  body {
     width: 100% !important;
     height: auto !important;
     min-height: 0 !important;
@@ -2435,27 +2429,24 @@ html.light .resume-toolbar-title {
     background: #fff !important;
   }
 
-  /* Hide everything outside the resume viewer */
-  body.print-resume * {
-    visibility: hidden !important;
+  body.print-resume {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
 
-  /* Show the resume viewer and its contents */
-  body.print-resume .resume-viewer-overlay,
-  body.print-resume .resume-viewer-overlay * {
-    visibility: visible !important;
+  /* Hide the entire website, leaving only the portalled resume */
+  body.print-resume > *:not(.resume-viewer-overlay) {
+    display: none !important;
   }
 
-  /* Resume viewer */
-  body.print-resume .resume-viewer-overlay {
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
+  body.print-resume > .resume-viewer-overlay {
     display: block !important;
+    position: static !important;
+    inset: auto !important;
     width: 100% !important;
     height: auto !important;
     min-height: 0 !important;
+    max-height: none !important;
     margin: 0 !important;
     padding: 0 !important;
     overflow: visible !important;
@@ -2465,6 +2456,7 @@ html.light .resume-toolbar-title {
   }
 
   body.print-resume .resume-viewer-container {
+    display: block !important;
     width: 100% !important;
     max-width: none !important;
     height: auto !important;
@@ -2474,12 +2466,10 @@ html.light .resume-toolbar-title {
     overflow: visible !important;
   }
 
-  /* Hide toolbar */
   body.print-resume .resume-toolbar {
     display: none !important;
   }
 
-  /* Resume document */
   body.print-resume .resume-document {
     display: block !important;
     position: static !important;
@@ -2487,6 +2477,7 @@ html.light .resume-toolbar-title {
     max-width: none !important;
     height: auto !important;
     min-height: 0 !important;
+    max-height: none !important;
     margin: 0 !important;
     padding: 0 !important;
     overflow: visible !important;
@@ -2495,11 +2486,8 @@ html.light .resume-toolbar-title {
     box-shadow: none !important;
     background: #fff !important;
     color: #171717 !important;
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
   }
 
-  /* Header */
   body.print-resume .resume-document-header {
     display: flex !important;
     flex-direction: row !important;
@@ -2532,25 +2520,23 @@ html.light .resume-toolbar-title {
     text-align: right !important;
   }
 
-  /* Two-column content */
   body.print-resume .resume-document-content {
     display: grid !important;
     grid-template-columns: minmax(0, 1fr) 70mm !important;
     align-items: start !important;
+    width: 100% !important;
     height: auto !important;
     min-height: 0 !important;
     overflow: visible !important;
   }
 
   body.print-resume .resume-main-column {
-    height: auto !important;
     min-height: 0 !important;
     padding: 8mm 7mm 8mm 8mm !important;
     overflow: visible !important;
   }
 
   body.print-resume .resume-sidebar {
-    height: auto !important;
     min-height: 0 !important;
     padding: 8mm 6mm !important;
     border-left: 1px solid #dedede !important;
@@ -2559,11 +2545,11 @@ html.light .resume-toolbar-title {
     overflow: visible !important;
   }
 
-  /* Natural page breaks */
   body.print-resume .resume-document,
   body.print-resume .resume-document-content,
   body.print-resume .resume-main-column,
-  body.print-resume .resume-sidebar {
+  body.print-resume .resume-sidebar,
+  body.print-resume .resume-section {
     break-inside: auto !important;
     page-break-inside: auto !important;
   }
@@ -2580,7 +2566,6 @@ html.light .resume-toolbar-title {
     page-break-after: avoid !important;
   }
 
-  /* Typography */
   body.print-resume .resume-section-heading h2 {
     font-size: 10pt !important;
   }
@@ -2611,20 +2596,17 @@ html.light .resume-toolbar-title {
     font-size: 7.5pt !important;
   }
 
-  /* Footer */
   body.print-resume .resume-document-footer {
     padding: 4mm 8mm !important;
     background: #f7f7f7 !important;
     font-size: 8pt !important;
   }
 
-  /* Monochrome */
   body.print-resume .resume-section-heading svg,
   body.print-resume .resume-contact-details svg {
     color: #333 !important;
   }
 
-  /* Disable animations */
   body.print-resume .resume-arrow {
     animation: none !important;
   }
